@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  LogoCAT.swift
 //  Cat
 //
 //  Created by Amelie Pocchiolo on 30/11/2022.
@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct LogoCAT: View {
     var body: some View {
-        CodeGameView()
+        Text("Chasse")
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct LogoCAT_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        LogoCAT()
     }
 }
