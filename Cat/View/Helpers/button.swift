@@ -17,12 +17,14 @@ struct buttonCust: View {
             .fill(Color(colorCust))
             .frame(width: 230, height: 50)
             Text(textLabel)
+                .foregroundColor(.black)
+                .font(.title3)
         }
     }
 }
 
 struct button_Previews: PreviewProvider {
     static var previews: some View {
-        buttonCust(textLabel: getButtonType(ButtonT: ButtonType.Enregistrer), colorCust: getColor(colorT: color.blue))
+        buttonCust(textLabel: getButtonType(ButtonT: ButtonType.Rejoindre), colorCust: getColor(colorT: .blueCust))
     }
 }

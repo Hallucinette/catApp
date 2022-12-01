@@ -9,7 +9,9 @@ import SwiftUI
 
 struct CodeGameView: View {
 
-    @State var text = ""
+   // Variable ephemere, A supprimer. Correspond a Game.code
+    @State var code = "1234"
+    
     @State var username: String = ""
     @State private var code1: String = ""
     @State private var code2: String = ""
@@ -42,61 +44,52 @@ struct CodeGameView: View {
                 .padding(.vertical)
             HStack {
                 
-                My_TextField2(text: code1)
-                My_TextField2(text: code2)
-                My_TextField2(text: code3)
-                My_TextField2(text: code4)
+            //    codeView(code: $code1)
+                My_TextField2(text: $code1)
+                My_TextField2(text: $code2)
+                My_TextField2(text: $code3)
+                My_TextField2(text: $code4)
 
             }
             .padding()
             
+            let totcode = code1 + code2 + code3 + code4
+           // Text(totcode)
+            
+            if (code1 != "" && code2 != "" &&
+                code3 != "" && code4 != "") {
+                Text(CompareCode(totcode: totcode, code: code))
+            }
+            
             Button {
                 // destination
+                // condition : que le code sois juste
+                // consequence = Ajout du user dans la partie
+                // redirection sur la salle d'attente
             } label: {
-                buttonCust(textLabel: getButtonType(ButtonT: .Rejoindre), colorCust: getColor(colorT: .blue))
+                buttonCust(textLabel: getButtonType(ButtonT: .Rejoindre), colorCust: getColor(colorT: .blueCust))
             }
             .padding()
 
         }
         .padding()
     }
+    
+    func CompareCode(totcode: String, code: String) -> String {
+        if totcode == "" {
+            return ""
+        }
+        if totcode != code {
+            return "Code faux !"
+        } else {
+            return "Code bon"
+        }
+    }
+
 }
 
 struct CodeGameView_Previews: PreviewProvider {
     static var previews: some View {
         CodeGameView()
-    }
-}
-
-struct TextLengthLimiter: ViewModifier {
-  @Binding var text: String
-  let maxLength: Int
-
-  func body(content: Content) -> some View {
-    content
-      .onReceive(text.publisher.collect()) { output in
-        text = String(output.prefix(maxLength)) // HERE
-    }
-  }
-}
-
-extension TextField {
-  func limitTextLength(_ text: Binding<String>,
-                       to maxLength: Int) -> some View {
-    self.modifier(TextLengthLimiter(text: text,
-                                    maxLength: maxLength))
-  }
-}
-
-struct My_TextField2: View {
-    @State var text = ""
-
-    var body: some View {
-        TextField("", text: $text)
-            .limitTextLength($text, to: 1)
-                    //modifier ici le nombre de charactere max
-            .textFieldStyle(RoundedBorderTextFieldStyle())
-            .frame(width: 50, height: 50)
-            .padding()
     }
 }
