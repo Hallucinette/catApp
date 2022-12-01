@@ -41,7 +41,7 @@ func getButtonType(ButtonT: ButtonType) -> String {
     return "err"
 }
 
-// *************************************** //
+// MARK
 
 enum color {
     case orange, blue
@@ -56,7 +56,3 @@ func getColor(colorT: color) -> String{
     }
     return "err"
 }
-//extension Color {
-//    static let orangeCust = Color("orangeCust")
-//    static let blueCust = Color("BleuCust")
-//}

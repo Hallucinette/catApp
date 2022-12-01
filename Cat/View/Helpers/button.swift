@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct button: View {
+struct buttonCust: View {
     var textLabel: String
     var colorCust: String
     var body: some View {
@@ -23,6 +23,6 @@ struct button: View {
 
 struct button_Previews: PreviewProvider {
     static var previews: some View {
-        button(textLabel: getButtonType(ButtonT: ButtonType.Enregistrer), colorCust: getColor(colorT: color.blue))
+        buttonCust(textLabel: getButtonType(ButtonT: ButtonType.Enregistrer), colorCust: getColor(colorT: color.blue))
     }
 }
