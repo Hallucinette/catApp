@@ -8,7 +8,7 @@
 import Foundation
 
 enum ButtonType {
-    case Enregistrer, Rejoindre, Création, Rappel
+    case Enregistrer, Rejoindre, Création, Rappel, Annuler
     case FinirLaPartie, RetourAuMenu, Suivant, Valider
 }
 
@@ -37,6 +37,9 @@ func getButtonType(ButtonT: ButtonType) -> String {
     if ButtonT == ButtonType.Valider {
         return "Valider"
     }
+    if ButtonT == ButtonType.Annuler {
+        return "Annuler"
+    }
 
     return "err"
 }
@@ -49,10 +52,10 @@ enum color {
 
 func getColor(colorT: color) -> String{
     if colorT == color.orangeCust{
-        return "orangeCust"
+        return "OrangeCust"
     }
     if colorT == color.blueCust{
-        return "blueCust"
+        return "BlueCust"
     }
     return "err"
 }
