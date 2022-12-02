@@ -76,6 +76,7 @@ struct CodeGameView: View {
     }
     
     func CompareCode(totcode: String, code: String) -> String {
+        //Ajout verification doit seulement etre un chiffre
         if totcode == "" {
             return ""
         }

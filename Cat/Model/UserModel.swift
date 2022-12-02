@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct User {
+struct User: Identifiable {
     var id: Int
     var mail: String
-    var pseudo: String?
+    var pseudo: String
     var totPoint: Int
     var gameCounter: Int
 }
