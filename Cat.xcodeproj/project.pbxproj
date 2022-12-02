@@ -23,6 +23,10 @@
 		7BC513FD29379BC200DE0CE9 /* CodeGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC513FC29379BC200DE0CE9 /* CodeGameView.swift */; };
 		7BC5140029379C0B00DE0CE9 /* LogoCAT.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC513FF29379C0B00DE0CE9 /* LogoCAT.swift */; };
 		7BC5140229389DA400DE0CE9 /* ViewTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC5140129389DA400DE0CE9 /* ViewTextField.swift */; };
+		7BC514042938FF1400DE0CE9 /* WaitingRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC514032938FF1300DE0CE9 /* WaitingRoom.swift */; };
+		7BC514072938FFEF00DE0CE9 /* UserWaitVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC514062938FFEF00DE0CE9 /* UserWaitVM.swift */; };
+		7BC514092939074000DE0CE9 /* CustList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC514082939074000DE0CE9 /* CustList.swift */; };
+		7BC5140D293A067E00DE0CE9 /* DotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC5140C293A067E00DE0CE9 /* DotView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +47,10 @@
 		7BC513FC29379BC200DE0CE9 /* CodeGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeGameView.swift; sourceTree = "<group>"; };
 		7BC513FF29379C0B00DE0CE9 /* LogoCAT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoCAT.swift; sourceTree = "<group>"; };
 		7BC5140129389DA400DE0CE9 /* ViewTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTextField.swift; sourceTree = "<group>"; };
+		7BC514032938FF1300DE0CE9 /* WaitingRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingRoom.swift; sourceTree = "<group>"; };
+		7BC514062938FFEF00DE0CE9 /* UserWaitVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWaitVM.swift; sourceTree = "<group>"; };
+		7BC514082939074000DE0CE9 /* CustList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustList.swift; sourceTree = "<group>"; };
+		7BC5140C293A067E00DE0CE9 /* DotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				7BC513F629376C2400DE0CE9 /* DeleteFile1.swift */,
+				7BC514062938FFEF00DE0CE9 /* UserWaitVM.swift */,
 				7BC513FA2937729B00DE0CE9 /* VM1.swift */,
 				7BC5140129389DA400DE0CE9 /* ViewTextField.swift */,
 			);
@@ -121,6 +130,7 @@
 			children = (
 				7BC513F2293766E900DE0CE9 /* DeleteFile.swift */,
 				7BC513FC29379BC200DE0CE9 /* CodeGameView.swift */,
+				7BC514032938FF1300DE0CE9 /* WaitingRoom.swift */,
 				7BC513FE29379BEC00DE0CE9 /* Helpers */,
 			);
 			path = View;
@@ -130,6 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				7BC513F8293770EE00DE0CE9 /* button.swift */,
+				7BC5140C293A067E00DE0CE9 /* DotView.swift */,
+				7BC514082939074000DE0CE9 /* CustList.swift */,
 				7BC513FF29379C0B00DE0CE9 /* LogoCAT.swift */,
 			);
 			path = Helpers;
@@ -207,11 +219,15 @@
 			files = (
 				7BC5140029379C0B00DE0CE9 /* LogoCAT.swift in Sources */,
 				7BC513D6293750F400DE0CE9 /* ContentView.swift in Sources */,
+				7BC5140D293A067E00DE0CE9 /* DotView.swift in Sources */,
+				7BC514072938FFEF00DE0CE9 /* UserWaitVM.swift in Sources */,
 				7BC513F9293770EE00DE0CE9 /* button.swift in Sources */,
 				7BC513D4293750F400DE0CE9 /* CatApp.swift in Sources */,
+				7BC514042938FF1400DE0CE9 /* WaitingRoom.swift in Sources */,
 				7BC513FB2937729B00DE0CE9 /* VM1.swift in Sources */,
 				7BC513F12937668B00DE0CE9 /* UserModel.swift in Sources */,
 				7BC513EB2937662F00DE0CE9 /* MapPointModel.swift in Sources */,
+				7BC514092939074000DE0CE9 /* CustList.swift in Sources */,
 				7BC513E7293765F400DE0CE9 /* TreasureModel.swift in Sources */,
 				7BC513F729376C2400DE0CE9 /* DeleteFile1.swift in Sources */,
 				7BC513EF2937666600DE0CE9 /* ParticipantModel.swift in Sources */,
