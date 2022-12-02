@@ -1,8 +1,8 @@
 //
-//  button.swift
+//  ButtonCust.swift
 //  Cat
 //
-//  Created by Amelie Pocchiolo on 30/11/2022.
+//  Created by Amelie Pocchiolo on 02/12/2022.
 //
 
 import SwiftUI
@@ -23,7 +23,7 @@ struct buttonCust: View {
     }
 }
 
-struct button_Previews: PreviewProvider {
+struct buttonCust_Previews: PreviewProvider {
     static var previews: some View {
         buttonCust(textLabel: getButtonType(ButtonT: ButtonType.Rejoindre), colorCust: getColor(colorT: .blueCust))
     }
