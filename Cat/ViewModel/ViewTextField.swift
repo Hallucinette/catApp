@@ -41,6 +41,7 @@ struct My_TextField2: View {
     }
 }
 
+// ---> La meme chose mais en fonction :
 //func CompareCode(totcode: Binding<String>, code:  Binding<String>) -> Bool {
 //    if totcode != code {
 //        Text("Code bon !")
@@ -50,22 +51,17 @@ struct My_TextField2: View {
 //        return false
 //    }
 //}
-//if totcode != code {
-//    Text("Code bon !")
-//} else {
-//    Text("Code faux")
-//    code1 = ""
-//    code2 = ""
-//    code3 = ""
-//    code4 = ""
-//}
 
-//    func codeView(code: Binding<String>) -> some View{
-//        TextField("", text: code)
-//            .limitTextLength(code, to: 1)
-//        //modifier ici le nombre de charactere max
-//            .textFieldStyle(RoundedBorderTextFieldStyle())
-//            .frame(width: 50, height: 50)
-//            .padding()
-//
-//    }
+struct My_TextField1: View {
+    @Binding var text: String
+    var txt: String
+
+    var body: some View {
+        VStack(alignment: .leading){
+            Text(txt)
+            TextField("", text: $text)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+        }
+        .padding()
+    }
+}
