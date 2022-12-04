@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B0652F4293D3CF4009385AA /* AddTargetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0652F3293D3CF4009385AA /* AddTargetView.swift */; };
 		7BC513D4293750F400DE0CE9 /* CatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC513D3293750F400DE0CE9 /* CatApp.swift */; };
 		7BC513D6293750F400DE0CE9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC513D5293750F400DE0CE9 /* ContentView.swift */; };
 		7BC513D8293750F400DE0CE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BC513D7293750F400DE0CE9 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7B0652F3293D3CF4009385AA /* AddTargetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddTargetView.swift; path = ../../../Addtarget/View/AddTargetView.swift; sourceTree = "<group>"; };
 		7BC513D0293750F400DE0CE9 /* Cat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BC513D3293750F400DE0CE9 /* CatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatApp.swift; sourceTree = "<group>"; };
 		7BC513D5293750F400DE0CE9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				7BC513F2293766E900DE0CE9 /* DeleteFile.swift */,
+				7B0652F3293D3CF4009385AA /* AddTargetView.swift */,
 				7BC513FC29379BC200DE0CE9 /* CodeGameView.swift */,
 				7BC514032938FF1300DE0CE9 /* WaitingRoom.swift */,
 				7BC513FE29379BEC00DE0CE9 /* Helpers */,
@@ -231,6 +234,7 @@
 				7BC513E7293765F400DE0CE9 /* TreasureModel.swift in Sources */,
 				7BC513F729376C2400DE0CE9 /* DeleteFile1.swift in Sources */,
 				7BC513EF2937666600DE0CE9 /* ParticipantModel.swift in Sources */,
+				7B0652F4293D3CF4009385AA /* AddTargetView.swift in Sources */,
 				7BC5140229389DA400DE0CE9 /* ViewTextField.swift in Sources */,
 				7BC513FD29379BC200DE0CE9 /* CodeGameView.swift in Sources */,
 				7BC513F3293766E900DE0CE9 /* DeleteFile.swift in Sources */,
