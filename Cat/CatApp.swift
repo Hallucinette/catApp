@@ -12,6 +12,7 @@ struct CatApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+            
         }
     }
 }
