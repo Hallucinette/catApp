@@ -9,6 +9,6 @@ import Foundation
 
 struct Game {
     var id: Int
-    var code: [Character]
+    var code: String
     var userId: Int //l'user qui cree la partie
 }

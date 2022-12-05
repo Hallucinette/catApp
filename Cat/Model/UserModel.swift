@@ -7,7 +7,9 @@
 
 import Foundation
 
+
 struct User: Identifiable, Codable, Equatable {
+
     var id: Int
     var mail: String
     var pseudo: String
