@@ -14,6 +14,7 @@
 		53985499293AB30000BF7CCF /* ClassementUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53985498293AB30000BF7CCF /* ClassementUserView.swift */; };
 		5398549B293CF0A200BF7CCF /* LeadBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5398549A293CF0A200BF7CCF /* LeadBoardView.swift */; };
 		7B0652F4293D3CF4009385AA /* AddTargetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0652F3293D3CF4009385AA /* AddTargetView.swift */; };
+		7B07F4C6293E386100DAA45F /* ButtonMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B07F4C5293E386100DAA45F /* ButtonMap.swift */; };
 		7B93B51A293E2D4200525897 /* CompassVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B93B519293E2D4200525897 /* CompassVM.swift */; };
 		7B93B51C293E2D5200525897 /* CompassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B93B51B293E2D5200525897 /* CompassView.swift */; };
 		7B93B51E293E2D6000525897 /* CompassMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B93B51D293E2D6000525897 /* CompassMarkerView.swift */; };
@@ -48,6 +49,7 @@
 		53985498293AB30000BF7CCF /* ClassementUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassementUserView.swift; sourceTree = "<group>"; };
 		5398549A293CF0A200BF7CCF /* LeadBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadBoardView.swift; sourceTree = "<group>"; };
 		7B0652F3293D3CF4009385AA /* AddTargetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddTargetView.swift; path = ../../../Addtarget/View/AddTargetView.swift; sourceTree = "<group>"; };
+		7B07F4C5293E386100DAA45F /* ButtonMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonMap.swift; sourceTree = "<group>"; };
 		7B93B519293E2D4200525897 /* CompassVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassVM.swift; sourceTree = "<group>"; };
 		7B93B51B293E2D5200525897 /* CompassView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassView.swift; sourceTree = "<group>"; };
 		7B93B51D293E2D6000525897 /* CompassMarkerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassMarkerView.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 		7BC513FE29379BEC00DE0CE9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				7B07F4C5293E386100DAA45F /* ButtonMap.swift */,
 				7B93B51D293E2D6000525897 /* CompassMarkerView.swift */,
 				7BC513F8293770EE00DE0CE9 /* ButtonCust.swift */,
 				7BC5140C293A067E00DE0CE9 /* DotView.swift */,
@@ -250,6 +253,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B07F4C6293E386100DAA45F /* ButtonMap.swift in Sources */,
 				7BC5140029379C0B00DE0CE9 /* LogoCAT.swift in Sources */,
 				7BC513D6293750F400DE0CE9 /* ContentView.swift in Sources */,
 				5356BACC2937719F00492851 /* UserViewModel.swift in Sources */,
