@@ -7,7 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
+		5356BACA2937718200492851 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5356BAC92937718200492851 /* UserView.swift */; };
+		5356BACC2937719F00492851 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5356BACB2937719F00492851 /* UserViewModel.swift */; };
+		5356BACE2937AD8A00492851 /* ClassementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5356BACD2937AD8A00492851 /* ClassementView.swift */; };
+		5356BAF4293A317600492851 /* UserModifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5356BAF3293A317600492851 /* UserModifView.swift */; };
+		53985499293AB30000BF7CCF /* ClassementUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53985498293AB30000BF7CCF /* ClassementUserView.swift */; };
+		5398549B293CF0A200BF7CCF /* LeadBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5398549A293CF0A200BF7CCF /* LeadBoardView.swift */; };
+
 		7B0652F4293D3CF4009385AA /* AddTargetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0652F3293D3CF4009385AA /* AddTargetView.swift */; };
+
 		7BC513D4293750F400DE0CE9 /* CatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC513D3293750F400DE0CE9 /* CatApp.swift */; };
 		7BC513D6293750F400DE0CE9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC513D5293750F400DE0CE9 /* ContentView.swift */; };
 		7BC513D8293750F400DE0CE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BC513D7293750F400DE0CE9 /* Assets.xcassets */; };
@@ -31,7 +40,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+
+		5356BAC92937718200492851 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		5356BACB2937719F00492851 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		5356BACD2937AD8A00492851 /* ClassementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassementView.swift; sourceTree = "<group>"; };
+		5356BAF3293A317600492851 /* UserModifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModifView.swift; sourceTree = "<group>"; };
+		53985498293AB30000BF7CCF /* ClassementUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassementUserView.swift; sourceTree = "<group>"; };
+		5398549A293CF0A200BF7CCF /* LeadBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadBoardView.swift; sourceTree = "<group>"; };
+
 		7B0652F3293D3CF4009385AA /* AddTargetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddTargetView.swift; path = ../../../Addtarget/View/AddTargetView.swift; sourceTree = "<group>"; };
+
 		7BC513D0293750F400DE0CE9 /* Cat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BC513D3293750F400DE0CE9 /* CatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatApp.swift; sourceTree = "<group>"; };
 		7BC513D5293750F400DE0CE9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -120,9 +138,13 @@
 			isa = PBXGroup;
 			children = (
 				7BC513F629376C2400DE0CE9 /* DeleteFile1.swift */,
+
+				5356BACB2937719F00492851 /* UserViewModel.swift */,
+
 				7BC514062938FFEF00DE0CE9 /* UserWaitVM.swift */,
 				7BC513FA2937729B00DE0CE9 /* Button&Color.swift */,
 				7BC5140129389DA400DE0CE9 /* ViewTextField.swift */,
+
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -131,10 +153,18 @@
 			isa = PBXGroup;
 			children = (
 				7BC513F2293766E900DE0CE9 /* DeleteFile.swift */,
+
+				5356BAC92937718200492851 /* UserView.swift */,
+				5356BAF3293A317600492851 /* UserModifView.swift */,
+				5356BACD2937AD8A00492851 /* ClassementView.swift */,
+				53985498293AB30000BF7CCF /* ClassementUserView.swift */,
+				5398549A293CF0A200BF7CCF /* LeadBoardView.swift */,
+
 				7B0652F3293D3CF4009385AA /* AddTargetView.swift */,
 				7BC513FC29379BC200DE0CE9 /* CodeGameView.swift */,
 				7BC514032938FF1300DE0CE9 /* WaitingRoom.swift */,
 				7BC513FE29379BEC00DE0CE9 /* Helpers */,
+
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -222,9 +252,13 @@
 			files = (
 				7BC5140029379C0B00DE0CE9 /* LogoCAT.swift in Sources */,
 				7BC513D6293750F400DE0CE9 /* ContentView.swift in Sources */,
+
+				5356BACC2937719F00492851 /* UserViewModel.swift in Sources */,
+
 				7BC5140D293A067E00DE0CE9 /* DotView.swift in Sources */,
 				7BC514072938FFEF00DE0CE9 /* UserWaitVM.swift in Sources */,
 				7BC513F9293770EE00DE0CE9 /* ButtonCust.swift in Sources */,
+
 				7BC513D4293750F400DE0CE9 /* CatApp.swift in Sources */,
 				7BC514042938FF1400DE0CE9 /* WaitingRoom.swift in Sources */,
 				7BC513FB2937729B00DE0CE9 /* Button&Color.swift in Sources */,
@@ -233,10 +267,18 @@
 				7BC514092939074000DE0CE9 /* CustList.swift in Sources */,
 				7BC513E7293765F400DE0CE9 /* TreasureModel.swift in Sources */,
 				7BC513F729376C2400DE0CE9 /* DeleteFile1.swift in Sources */,
+				5398549B293CF0A200BF7CCF /* LeadBoardView.swift in Sources */,
 				7BC513EF2937666600DE0CE9 /* ParticipantModel.swift in Sources */,
+
+				53985499293AB30000BF7CCF /* ClassementUserView.swift in Sources */,
+				5356BACA2937718200492851 /* UserView.swift in Sources */,
+				5356BACE2937AD8A00492851 /* ClassementView.swift in Sources */,
+				5356BAF4293A317600492851 /* UserModifView.swift in Sources */,
+
 				7B0652F4293D3CF4009385AA /* AddTargetView.swift in Sources */,
 				7BC5140229389DA400DE0CE9 /* ViewTextField.swift in Sources */,
 				7BC513FD29379BC200DE0CE9 /* CodeGameView.swift in Sources */,
+
 				7BC513F3293766E900DE0CE9 /* DeleteFile.swift in Sources */,
 				7BC513ED2937665000DE0CE9 /* GameModel.swift in Sources */,
 			);
