@@ -11,7 +11,10 @@ import Foundation
 struct User: Identifiable, Codable, Equatable {
 
     var id: Int
-    var mail: String
+    var email: String
+    var newEmail: String?
+    var password: String
+    var newPassword: String?
     var pseudo: String
     var totPoint: Int
     var gameCounter: Int

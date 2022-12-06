@@ -9,20 +9,23 @@ import Foundation
 
 class UserViewModel: ObservableObject {
     
-    
+    @Published var pseudo = ""
+    @Published var email = ""
+    @Published var password = ""
+    @Published var newPassword = ""
  
     @Published var users: [User] = [
         
-        User(id: 1, mail: "user1@mail.com", pseudo: "Sandra", totPoint: 0, gameCounter: 10),
-        User(id: 2, mail: "user2@mail.com", pseudo: "Lili", totPoint: 0, gameCounter: 10),
-        User(id: 3, mail: "user3@mail.com", pseudo: "Coucou", totPoint: 0, gameCounter: 10),
-        User(id: 4, mail: "user4@mail.com", pseudo: "Sara", totPoint: 0, gameCounter: 10),
-        User(id: 5, mail: "user5@mail.com", pseudo: "Loulou", totPoint: 0, gameCounter: 10),
-        User(id: 6, mail: "user6@mail.com", pseudo: "Minou", totPoint: 0, gameCounter: 10),
-        User(id: 7, mail: "user7@mail.com", pseudo: "Alpha", totPoint: 0, gameCounter: 10),
-        User(id: 8, mail: "user8@mail.com", pseudo: "Beta", totPoint: 0, gameCounter: 10),
-        User(id: 9, mail: "user9@mail.com", pseudo: "Gamma", totPoint: 0, gameCounter: 10),
-        User(id: 10, mail:"user10@mail.com", pseudo: "kikou", totPoint: 0, gameCounter: 10)
+        User(id: 1, email: "user1@mail.com",password: "123", pseudo: "Sandra", totPoint: 0, gameCounter: 10),
+        User(id: 2, email: "user2@mail.com",password: "123", pseudo: "Lili", totPoint: 0, gameCounter: 10),
+        User(id: 3, email: "user3@mail.com",password: "123", pseudo: "Coucou", totPoint: 0, gameCounter: 10),
+        User(id: 4, email: "user4@mail.com",password: "123", pseudo: "Sara", totPoint: 0, gameCounter: 10),
+        User(id: 5, email: "user5@mail.com",password: "123", pseudo: "Loulou", totPoint: 0, gameCounter: 10),
+        User(id: 6, email: "user6@mail.com",password: "123", pseudo: "Minou", totPoint: 0, gameCounter: 10),
+        User(id: 7, email: "user7@mail.com",password: "123", pseudo: "Alpha", totPoint: 0, gameCounter: 10),
+        User(id: 8, email: "user8@mail.com",password: "123", pseudo: "Beta", totPoint: 0, gameCounter: 10),
+        User(id: 9, email: "user9@mail.com",password: "123", pseudo: "Gamma", totPoint: 0, gameCounter: 10),
+        User(id: 10, email:"user10@mail.com",password: "123", pseudo: "kikou", totPoint: 0, gameCounter: 10)
        
     ]
     

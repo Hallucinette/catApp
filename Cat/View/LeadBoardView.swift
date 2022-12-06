@@ -64,7 +64,7 @@ struct LeadBoardView: View {
                     Section(
                         header:
                             HStack{
-                                Text("Paudium")
+                                Text("Podium")
                                 Image(systemName: "sparkles")
                              
                             }

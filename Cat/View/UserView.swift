@@ -81,7 +81,7 @@ struct UserView: View {
                     
                     List {
                         Section(
-                            header: Text("Paties enregistrées")
+                            header: Text("Parties enregistrées")
                                 .font(.headline)
                                 .foregroundColor(.mint) ){
                                     ForEach(parties, id:\.self) { partie in
@@ -92,9 +92,15 @@ struct UserView: View {
                                 }
                         
                         
-                        
+                          //      .listRowBackground(
+                            //        Color(.systemFill)
+                                         //      .clipped()
+                                              // .cornerRadius(10)
+                             //   )
                         
                     }.padding()
+                        
+                    
                 }
                 //.navigationTitle("Statistiques")
                 
@@ -103,7 +109,7 @@ struct UserView: View {
                         
                         
                        
-                        NavigationLink(destination: UserModifView(userVM: userVM)){
+                        NavigationLink(destination: UserSettingView(userVM: userVM)){
                             
                             Image(systemName: "gear")
                         }
@@ -124,7 +130,7 @@ struct UserView: View {
 }
     struct UserView_Previews: PreviewProvider {
         static var previews: some View {
-            UserView(userVM: UserViewModel(), user:User(id: 1, mail: "user1@mail.com", pseudo: "user1", totPoint: 200, gameCounter: 10) )
+            UserView(userVM: UserViewModel(), user:User(id: 1, email: "user1@mail.com",password: "123", pseudo: "user1", totPoint: 200, gameCounter: 10) )
             
             
         }

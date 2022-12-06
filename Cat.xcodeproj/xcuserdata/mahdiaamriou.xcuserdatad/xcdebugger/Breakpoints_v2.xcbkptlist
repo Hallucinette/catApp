@@ -20,7 +20,7 @@
             landmarkType = "24">
             <Locations>
                <Location
-                  uuid = "ECBA4645-1A50-420B-AC50-3DA08AE37635 - d32e8e1154ebf589"
+                  uuid = "ECBA4645-1A50-420B-AC50-3DA08AE37635 - d32e8e1154ebf522"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -30,12 +30,12 @@
                   urlString = "file:///Users/mahdiaamriou/Documents/catApp/Cat/View/UserModifView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "37"
-                  endingLineNumber = "37"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
                   offsetFromSymbolStart = "1112">
                </Location>
                <Location
-                  uuid = "ECBA4645-1A50-420B-AC50-3DA08AE37635 - 2156dc0cd1a17e17"
+                  uuid = "ECBA4645-1A50-420B-AC50-3DA08AE37635 - 2156dc0cd1a17fb8"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -45,8 +45,8 @@
                   urlString = "file:///Users/mahdiaamriou/Documents/catApp/Cat/View/UserModifView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
                   offsetFromSymbolStart = "696">
                </Location>
             </Locations>
