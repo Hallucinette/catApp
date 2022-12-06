@@ -39,7 +39,7 @@ struct ClassementUserView: View {
                             
                         }
                         
-                    }.padding()
+                    }.cornerRadius(20)
                     
                     
                     

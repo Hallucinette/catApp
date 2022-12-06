@@ -91,7 +91,7 @@ struct LeadBoardView: View {
                                 }
                     }.padding(.vertical,14)
                     
-                }
+                }.cornerRadius(20)
                
                 Button {
                     

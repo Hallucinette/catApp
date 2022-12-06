@@ -73,7 +73,7 @@ struct UserView: View {
                                     }.padding(.vertical,12)
                                 }
                         
-                    }.padding()
+                    }.cornerRadius(20)
                     
                     
                     
@@ -92,47 +92,42 @@ struct UserView: View {
                                 }
                         
                         
-                          //      .listRowBackground(
-                            //        Color(.systemFill)
-                                         //      .clipped()
-                                              // .cornerRadius(10)
-                             //   )
-                        
-                    }.padding()
-                        
+                    }.cornerRadius(20)
                     
-                }
-                //.navigationTitle("Statistiques")
+                    
+                    
+                }.padding()
                 
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        
-                        
-                       
-                        NavigationLink(destination: UserSettingView(userVM: userVM)){
+                
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarTrailing) {
                             
-                            Image(systemName: "gear")
-                        }
-                        
-                        
+                            
+                            
+                            NavigationLink(destination: UserSettingView(userVM: userVM)){
                                 
-                        
+                                Image(systemName: "gear")
+                            }
+                            
+                            
+                            
+                            
                         }
                     }
-                    
-                    
-                }
                 
                 
             }
-        }
-    
-}
-    struct UserView_Previews: PreviewProvider {
-        static var previews: some View {
-            UserView(userVM: UserViewModel(), user:User(id: 1, email: "user1@mail.com",password: "123", pseudo: "user1", totPoint: 200, gameCounter: 10) )
             
             
         }
     }
+    
+}
+struct UserView_Previews: PreviewProvider {
+    static var previews: some View {
+        UserView(userVM: UserViewModel(), user:User(id: 1, email: "user1@mail.com",password: "123", pseudo: "user1", totPoint: 200, gameCounter: 10) )
+        
+        
+    }
+}
 

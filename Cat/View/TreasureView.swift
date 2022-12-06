@@ -71,7 +71,7 @@ struct TreasureView: View {
                         
                         
                         
-                    }.padding()
+                    }.cornerRadius(20)
                         
                         
                         Button {

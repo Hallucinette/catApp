@@ -14,7 +14,7 @@ struct SignUpView: View {
     
     var body: some View {
         VStack(spacing: 20) {
-            Text ("INSCRIPTION")
+            Text ("Inscription")
                 .foregroundColor(.black)
                 .font(.largeTitle)
             
@@ -25,7 +25,7 @@ struct SignUpView: View {
                .textInputAutocapitalization(.never)
               
                 
-            TextField("Confirmer Email", text: $userVM.email)
+            TextField("Confirmer email", text: $userVM.email)
                .font(.title3)
                .textFieldStyle(RoundedBorderTextFieldStyle ())
                .textContentType(.emailAddress)

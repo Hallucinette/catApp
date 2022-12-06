@@ -16,9 +16,12 @@ struct UserSettingView: View {
     
         
         @ObservedObject var userVM: UserViewModel
-      
+    
+    
+        private let EmailToConfirmAgainst = "user@email.com"
         @State private var email = ""
         @State private var newEmail = ""
+        @State private var confirmedEmail = ""
     
     
     private let PasswordToConfirmAgainst = "12345"
@@ -33,6 +36,21 @@ struct UserSettingView: View {
         }
         
         if !newPassword.isEmpty && newPassword == confirmedPassword {
+            return true
+        }
+        
+        return false
+    }
+    
+    
+    
+    
+    private func isEmailValid() -> Bool {
+        if email != EmailToConfirmAgainst {
+            return false
+        }
+        
+        if !newEmail.isEmpty && newEmail == confirmedEmail {
             return true
         }
         
@@ -58,9 +76,9 @@ struct UserSettingView: View {
                             header: Text("Modifier mot de passe")
                                 .font(.headline)
                                 .foregroundColor(.mint)) {
-                                    SecureField("Enter old password", text: $password)
-                                    SecureField("New Password", text: $newPassword)
-                                    SecureField("Confirm New Password", text: $confirmedPassword)
+                                    SecureField("Enter ancien mot de passe", text: $password)
+                                    SecureField("Nouveau mot de passe", text: $newPassword)
+                                    SecureField("Confirmer nouveau mot de passe", text: $confirmedPassword)
                                 }
                                     if self.isPasswordValid() {
                                         Button(action: {
@@ -78,11 +96,19 @@ struct UserSettingView: View {
                             header: Text("Modifier Email")
                                 .font(.headline)
                                 .foregroundColor(.mint)) {
-                                    TextField("Enter ancien email", text: $email)
-                                    TextField("Enter nouveau email", text: $newEmail)
-                                }.padding()
+                                    SecureField("Enter ancien email", text: $email)
+                                    SecureField("Nouveau email", text: $newEmail)
+                                    SecureField("Confirmer nouveau email", text: $confirmedEmail)
+                                }
+                                    if self.isEmailValid() {
+                                        Button(action: {
+                                            print("Updated password")
+                                        }, label: {
+                                            Text("Votre email a été changé")
+                                        })
+                                    }
                         
-                    }
+                    }.cornerRadius(20)
                     
                     Button {
                         
@@ -99,7 +125,7 @@ struct UserSettingView: View {
                         
                         Spacer()
                         
-                    }.padding()
+                    }.padding(.top,150)
                     
                     
                     

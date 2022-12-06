@@ -81,7 +81,7 @@ struct ClassementView: View {
                               }
                         
                         
-                             }.padding()
+                             }.cornerRadius(20)
                         
                         
                         Button {
