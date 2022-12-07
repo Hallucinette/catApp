@@ -19,23 +19,28 @@ struct SignInView: View {
         ZStack{
             backgroundGradient
                 .ignoresSafeArea()
-            VStack{
-                Text("  Chasse aux trésors")
-                    .font(.custom("Chasse aux trésors", size:45))
-                    .foregroundColor(.yellow)
-                    .shadow(color:.black, radius: 0, x:5, y:5)
-                
-                LottieView(lottieFile: "tresor")
-                .frame(width: 200, height: 200)
-                
-                Spacer()
-            }.padding()
             
-            
-           
+        
                 
+                VStack{
+                    
+                    
+                    Text("  Chasse aux trésors")
+                        .font(.custom("Chasse aux trésors", size:45))
+                        .foregroundColor(.yellow)
+                        .shadow(color:.black, radius: 0, x:5, y:5)
+                    
+                    
+                    Spacer()
+                }.padding(.top, 80)
+                
+                
+            
                 
                 VStack(spacing: 20) {
+                    
+                    LottieView(lottieFile: "tresor")
+                        .frame(width: 300, height: 300)
                     Text ("Connexion")
                         .foregroundColor(.black)
                         .font(.largeTitle)

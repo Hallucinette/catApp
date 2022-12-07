@@ -4,6 +4,7 @@
 //
 //  Created by Mahdia Amriou on 07/12/2022.
 //
+import Foundation
 import SwiftUI
 import Lottie
  
@@ -15,7 +16,7 @@ struct LottieView: UIViewRepresentable {
     func makeUIView(context: Context) -> some UIView {
         let view = UIView(frame: .zero)
  
-        animationView.animation = Animation.named(lottieFile)
+        animationView.animation = LottieAnimation.named(lottieFile)
         animationView.contentMode = .scaleAspectFit
         // to make it move in a loop
         animationView.loopMode = .loop

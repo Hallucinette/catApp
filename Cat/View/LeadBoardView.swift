@@ -24,9 +24,12 @@ struct LeadBoardView: View {
                 
             VStack{
                 
-                Image("winning")
-                    .resizable()
-                    .frame(width: 150.0, height: 150.0)
+                LottieView(lottieFile: "podium")
+                    .frame(width: 200, height: 200)
+                
+             //   Image("winning")
+              //      .resizable()
+              //      .frame(width: 150.0, height: 150.0)
                 Text("VICTOIRE")
                     .foregroundColor(.black)
                     .bold()
