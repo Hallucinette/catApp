@@ -30,6 +30,7 @@ struct UserView: View {
             
             ZStack{
                 backgroundGradient
+                    .ignoresSafeArea()
                 
                 VStack{
                     
@@ -42,7 +43,7 @@ struct UserView: View {
                         Section(
                             header: Text("statistiques")
                                 .font(.headline)
-                                .foregroundColor(.mint)) {
+                                .foregroundColor(.yellow)) {
                                     ForEach(0..<1, id: \.self) { index in
                                         
                                         HStack{
@@ -73,7 +74,10 @@ struct UserView: View {
                                     }.padding(.vertical,12)
                                 }
                         
-                    }.cornerRadius(20)
+                    }.scrollContentBackground(.hidden)
+                       
+                    
+                  
                     
                     
                     
@@ -83,7 +87,7 @@ struct UserView: View {
                         Section(
                             header: Text("Parties enregistrées")
                                 .font(.headline)
-                                .foregroundColor(.mint) ){
+                                .foregroundColor(.blue) ){
                                     ForEach(parties, id:\.self) { partie in
                                         Text(partie.capitalized)
                                         
@@ -92,10 +96,9 @@ struct UserView: View {
                                 }
                         
                         
-                    }.cornerRadius(20)
-                    
-                    
-                    
+                    }.scrollContentBackground(.hidden)
+                        
+                
                 }.padding()
                 
                 
@@ -107,6 +110,7 @@ struct UserView: View {
                             NavigationLink(destination: UserSettingView(userVM: userVM)){
                                 
                                 Image(systemName: "gear")
+                                    .foregroundColor(.black)
                             }
                             
                             

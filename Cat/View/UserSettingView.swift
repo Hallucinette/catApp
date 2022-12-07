@@ -10,6 +10,7 @@ import SwiftUI
 let backgroundGradient2 = LinearGradient(
     colors: [Color.blue, Color.yellow],
     startPoint: .top, endPoint: .bottom)
+   
 
 
 struct UserSettingView: View {
@@ -63,6 +64,7 @@ struct UserSettingView: View {
         var body: some View {
             ZStack{
                 backgroundGradient2
+                    .ignoresSafeArea()
                 
                 VStack{
                     
@@ -75,14 +77,18 @@ struct UserSettingView: View {
                         Section(
                             header: Text("Modifier mot de passe")
                                 .font(.headline)
-                                .foregroundColor(.mint)) {
+                                .foregroundColor(.yellow)) {
                                     SecureField("Enter ancien mot de passe", text: $password)
                                     SecureField("Nouveau mot de passe", text: $newPassword)
                                     SecureField("Confirmer nouveau mot de passe", text: $confirmedPassword)
                                 }
-                                    if self.isPasswordValid() {
+                        
+                        
+                                  if self.isPasswordValid() {
+                        
                                         Button(action: {
-                                            print("Updated password")
+                                           // print("Updated password")
+                                            
                                         }, label: {
                                             Text("Votre mot de passe a été changé")
                                         })
@@ -95,11 +101,14 @@ struct UserSettingView: View {
                         Section(
                             header: Text("Modifier Email")
                                 .font(.headline)
-                                .foregroundColor(.mint)) {
-                                    SecureField("Enter ancien email", text: $email)
-                                    SecureField("Nouveau email", text: $newEmail)
-                                    SecureField("Confirmer nouveau email", text: $confirmedEmail)
+                                .foregroundColor(.blue)) {
+                                    TextField("Enter ancien email", text: $email)
+                                    
+                                    TextField("Nouveau email", text: $newEmail)
+                                    TextField("Confirmer nouveau email", text: $confirmedEmail)
                                 }
+                                .textInputAutocapitalization(.never)
+                        
                                     if self.isEmailValid() {
                                         Button(action: {
                                             print("Updated password")
@@ -108,7 +117,10 @@ struct UserSettingView: View {
                                         })
                                     }
                         
-                    }.cornerRadius(20)
+                    }.scrollContentBackground(.hidden)
+                        
+                    
+                    
                     
                     Button {
                         

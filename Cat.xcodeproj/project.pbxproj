@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		530613FA293FFE8A00E81DB7 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530613F9293FFE8A00E81DB7 /* TestView.swift */; };
 		5318EF69293E2C3700A87B59 /* UserSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5318EF68293E2C3700A87B59 /* UserSettingView.swift */; };
 		5356BACA2937718200492851 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5356BAC92937718200492851 /* UserView.swift */; };
 		5356BACC2937719F00492851 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5356BACB2937719F00492851 /* UserViewModel.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		530613F9293FFE8A00E81DB7 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		5318EF68293E2C3700A87B59 /* UserSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingView.swift; sourceTree = "<group>"; };
 		5356BAC92937718200492851 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		5356BACB2937719F00492851 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				53DC2710293EA54E0047A181 /* TreasureView.swift */,
 				53DC2716293F5E260047A181 /* SignInView.swift */,
 				53DC2718293F5EA10047A181 /* SignUpView.swift */,
+				530613F9293FFE8A00E81DB7 /* TestView.swift */,
 				7BC513FE29379BEC00DE0CE9 /* Helpers */,
 			);
 			path = View;
@@ -250,6 +253,7 @@
 				7BC5140029379C0B00DE0CE9 /* LogoCAT.swift in Sources */,
 				7BC513D6293750F400DE0CE9 /* ContentView.swift in Sources */,
 				5356BACC2937719F00492851 /* UserViewModel.swift in Sources */,
+				530613FA293FFE8A00E81DB7 /* TestView.swift in Sources */,
 				7BC5140D293A067E00DE0CE9 /* DotView.swift in Sources */,
 				7BC514072938FFEF00DE0CE9 /* UserWaitVM.swift in Sources */,
 				7BC513F9293770EE00DE0CE9 /* ButtonCust.swift in Sources */,

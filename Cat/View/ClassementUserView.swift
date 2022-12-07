@@ -7,6 +7,11 @@
 
 import SwiftUI
 
+
+let backgroundGradient7 = LinearGradient(
+    colors: [Color.blue, Color.yellow],
+    startPoint: .top, endPoint: .bottom)
+
 struct ClassementUserView: View {
     
     @ObservedObject var userVM: UserViewModel
@@ -16,7 +21,8 @@ struct ClassementUserView: View {
         NavigationView {
             
             ZStack{
-                backgroundGradient1
+                backgroundGradient7
+                  .ignoresSafeArea()
                 
                 VStack(alignment: .center) {
                     
@@ -39,7 +45,8 @@ struct ClassementUserView: View {
                             
                         }
                         
-                    }.cornerRadius(20)
+                    }.scrollContentBackground(.hidden)
+                        
                     
                     
                     

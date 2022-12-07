@@ -30,6 +30,7 @@ struct TreasureView: View {
             
             ZStack{
                 backgroundGradient4
+                    .ignoresSafeArea()
                 
                 VStack(alignment: .center) {
                     
@@ -71,7 +72,10 @@ struct TreasureView: View {
                         
                         
                         
-                    }.cornerRadius(20)
+                    }.scrollContentBackground(.hidden)
+                        
+                    
+                  
                         
                         
                         Button {
@@ -95,6 +99,7 @@ struct TreasureView: View {
                     }.padding()
                         .navigationBarTitle("Liste des objets")
                         .navigationBarItems(leading: EditButton())
+                        .foregroundColor(.black)
                     
                     
                 }
