@@ -14,7 +14,7 @@ let backgroundGradient3 = LinearGradient(
 
 struct LeadBoardView: View {
     
-    @ObservedObject var userVM: UserViewModel
+    @EnvironmentObject var userVM: UserViewModel
    
     var body: some View {
         ZStack{
@@ -125,6 +125,7 @@ struct LeadBoardView: View {
 
 struct LeadBoardView_Previews: PreviewProvider {
     static var previews: some View {
-        LeadBoardView(userVM: UserViewModel())
+        LeadBoardView()
+            .environmentObject(UserViewModel())
     }
 }

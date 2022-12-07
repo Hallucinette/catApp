@@ -9,9 +9,7 @@ import SwiftUI
 
 struct SignInView: View {
     
-    @ObservedObject var userVM: UserViewModel
-    
-    
+    @EnvironmentObject var userVM: UserViewModel
     
     var body: some View {
         NavigationView {
@@ -22,6 +20,14 @@ struct SignInView: View {
             
         
                 
+
+                
+                Button {
+                    Task {
+                        let _ = try await userVM.signIn(email: userVM.email, password: userVM.password)                        
+                    }
+                } label: {
+
                 VStack{
                     
                     
@@ -57,6 +63,7 @@ struct SignInView: View {
                         .textFieldStyle(RoundedBorderTextFieldStyle ())
                         .textContentType(.password)
                     
+
                     Text(" Sign In")
                         .font(.title3)
                         .foregroundColor(.white)
@@ -64,20 +71,17 @@ struct SignInView: View {
                         .background(
                             RoundedRectangle(cornerRadius: 8)
                                 .foregroundColor(.blue)
-                            
+
                         )
-                    
-                    
-                    
-                    
-                    HStack {
-                        Text("Don't have an account ?")
-                        NavigationLink {
-                            SignUpView(userVM: userVM)
-                        } label: {
-                            Text("Sign Up")
-                            
-                        }
+                }
+
+                HStack {
+                    Text("Don't have an account ?")
+                    NavigationLink {
+                        SignUpView()
+                    } label: {
+                        Text("Sign Up")
+
                     }
                 }.padding()
                 
@@ -88,6 +92,7 @@ struct SignInView: View {
 }
 struct  SigInView_Previews: PreviewProvider {
     static var previews: some View {
-        SignInView(userVM: UserViewModel())
+        SignInView()
+            .environmentObject(UserViewModel())
     }
 }

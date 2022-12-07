@@ -15,11 +15,9 @@ let backgroundGradient2 = LinearGradient(
 
 struct UserSettingView: View {
     
-        
-        @ObservedObject var userVM: UserViewModel
-    
-    
-        private let EmailToConfirmAgainst = "user@email.com"
+        @EnvironmentObject var userVM: UserViewModel
+      
+
         @State private var email = ""
         @State private var newEmail = ""
         @State private var confirmedEmail = ""
@@ -68,11 +66,8 @@ struct UserSettingView: View {
                 
                 VStack{
                     
-                    Image(systemName: "person.circle")
-                    
+                    Image(systemName: "person.circle")    
                         .font(.system(size: 90, weight: .medium))
-                    
-                    
                     Form{
                         Section(
                             header: Text("Modifier mot de passe")
@@ -119,8 +114,9 @@ struct UserSettingView: View {
                         
                     }.scrollContentBackground(.hidden)
                         
-                    
-                    
+
+                    }.cornerRadius(20)
+
                     
                     Button {
                         
@@ -137,7 +133,11 @@ struct UserSettingView: View {
                         
                         Spacer()
                         
+
+                    
+
                     }.padding(.top,150)
+
                     
                     
                     
@@ -166,6 +166,7 @@ struct UserSettingView: View {
 
 struct UserSettingView_Previews: PreviewProvider {
     static var previews: some View {
-        UserSettingView(userVM: UserViewModel())
+        UserSettingView()
+            .environmentObject(UserViewModel())
     }
 }

@@ -13,7 +13,7 @@ let backgroundGradient4 = LinearGradient(
 
 struct TreasureView: View {
     
-    @ObservedObject var teasureVM: TreasureViewModel
+    @EnvironmentObject var teasureVM: TreasureViewModel
     
     @State private var showConfirm = false
     @State private var indexSetToDelete: IndexSet?
@@ -112,6 +112,7 @@ struct TreasureView: View {
 
 struct TreasureView_Previews: PreviewProvider {
     static var previews: some View {
-        TreasureView(teasureVM: TreasureViewModel())
+        TreasureView()
+            .environmentObject(TreasureViewModel())
     }
 }

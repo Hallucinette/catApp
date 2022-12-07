@@ -11,9 +11,13 @@ class UserViewModel: ObservableObject {
     
     @Published var pseudo = ""
     @Published var email = ""
+    @Published var repeatEmail = ""
     @Published var password = ""
     @Published var newPassword = ""
- 
+    @Published var isConnected = false
+    
+    @Published var user: User = User(id: 1, email: "test@test.com", password: "123", pseudo: "arktik", totPoint: 0, gameCounter: 0)
+    
     @Published var users: [User] = [
         
         User(id: 1, email: "user1@mail.com",password: "123", pseudo: "Sandra", totPoint: 0, gameCounter: 10),
@@ -44,13 +48,10 @@ class UserViewModel: ObservableObject {
         users.remove(at: index)
     }
    
-    
-    
-    
-    
-    
- //  var endPoint = "https://"
-    
+    // Urls pour l'API
+   var baseUrl = "http://localhost:8080"
+    var endPointSignIn = "/api/auth/signin"
+    var endPointSignUp = ")/api/auth/signup"
     
     // - MARK: Fonction READ
    // func getUserFromApi() async throws -> ([User]) {

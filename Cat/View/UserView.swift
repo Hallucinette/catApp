@@ -19,9 +19,9 @@ struct UserView: View {
     
     @State var parties: [String] = ["Partie 1 ","Partie 2"]
     
-    @ObservedObject var userVM: UserViewModel
+    @EnvironmentObject var userVM: UserViewModel
     
-    let user: User
+    
     
     
     var body: some View {
@@ -50,7 +50,7 @@ struct UserView: View {
                                             Text("Cumul de points")
                                             Spacer()
                                             
-                                            Text("\(user.totPoint)")
+                                            Text("\(userVM.user.totPoint)")
                                                 .foregroundColor(.gray)
                                                 .font(.callout)
                                         }
@@ -58,7 +58,7 @@ struct UserView: View {
                                         HStack{
                                             Text("Nombre de parties")
                                             Spacer()
-                                            Text("\(user.gameCounter)")
+                                            Text("\(userVM.user.gameCounter)")
                                                 .foregroundColor(.gray)
                                                 .font(.callout)
                                         }
@@ -66,9 +66,16 @@ struct UserView: View {
                                         HStack{
                                             Text("Moyenne")
                                             Spacer()
-                                            Text("\(user.totPoint / user.gameCounter)")
-                                                .foregroundColor(.gray)
-                                                .font(.callout)
+                                            if userVM.user.gameCounter > 0 {
+                                                Text("\(userVM.user.totPoint / userVM.user.gameCounter)")
+                                                    .foregroundColor(.gray)
+                                                    .font(.callout)
+                                            } else {
+                                                Text("0")
+                                                    .foregroundColor(.gray)
+                                                    .font(.callout)
+                                            }
+                                            
                                         }
                                         
                                     }.padding(.vertical,12)
@@ -90,12 +97,11 @@ struct UserView: View {
                                 .foregroundColor(.blue) ){
                                     ForEach(parties, id:\.self) { partie in
                                         Text(partie.capitalized)
-                                        
-                                        
                                     }
                                 }
                         
                         
+
                     }.scrollContentBackground(.hidden)
                         
                 
@@ -127,6 +133,7 @@ struct UserView: View {
     }
     
 }
+
 struct UserView_Previews: PreviewProvider {
     static var previews: some View {
         UserView(userVM: UserViewModel(), user:User(id: 1, email: "user1@mail.com",password: "123", pseudo: "user1", totPoint: 200, gameCounter: 10) )
