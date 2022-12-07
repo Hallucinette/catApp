@@ -13,42 +13,58 @@ struct SignUpView: View {
     
     
     var body: some View {
-        VStack(spacing: 20) {
-            Text ("INSCRIPTION")
-                .foregroundColor(.black)
-                .font(.largeTitle)
-            
-            TextField("Email", text: $userVM.email)
-               .font(.title3)
-               .textFieldStyle(RoundedBorderTextFieldStyle ())
-               .keyboardType(.emailAddress)
-               .textInputAutocapitalization(.never)
-               .autocorrectionDisabled(true)
-              
+
+        
+        ZStack{
+            backgroundGradient
+                .ignoresSafeArea()
+            VStack{
+                Text("  Chasse aux trésors")
+                    .font(.custom("Chasse aux trésors", size:45))
+                    .foregroundColor(.yellow)
+                    .shadow(color:.black, radius: 2, x:5, y:5)
                 
-            TextField("Confirmer Email", text: $userVM.repeatEmail)
-               .font(.title3)
-               .textFieldStyle(RoundedBorderTextFieldStyle ())
-               .textContentType(.emailAddress)
-               .keyboardType(.emailAddress)
-               .textInputAutocapitalization(.never)
-               .autocorrectionDisabled(true)
+                Spacer()
+            }.padding()
             
-            SecureField("Mot de passe", text: $userVM.password)
-                .font(.title3)
-                .textFieldStyle(RoundedBorderTextFieldStyle ())
-                .textContentType(.password)
-             
-            
-            Button(action: {
+            VStack(spacing: 20) {
+                Text ("Inscription")
+                    .foregroundColor(.black)
+                    .font(.largeTitle)
+                
+                TextField("Email", text: $userVM.email)
+                    .font(.title3)
+                    .textFieldStyle(RoundedBorderTextFieldStyle ())
+                    .keyboardType(.emailAddress)
+                    .textInputAutocapitalization(.never)
+                    .autocorrectionDisabled(true)
+                
+                
+                TextField("Confirmer email", text: $userVM.email)
+                
+                
+
+                    .font(.title3)
+                    .textFieldStyle(RoundedBorderTextFieldStyle ())
+                    .textContentType(.emailAddress)
+                    .keyboardType(.emailAddress)
+                    .textInputAutocapitalization(.never)
+                    .autocorrectionDisabled(true)
+                
+                SecureField("Mot de passe", text: $userVM.password)
+                    .font(.title3)
+                    .textFieldStyle(RoundedBorderTextFieldStyle ())
+                    .textContentType(.password)
+                
+                
+                Button(action: {
              // Action inscription
                 if userVM.email == userVM.repeatEmail {
                     
                     // Inscription
                     Task {
                         print("go inscription")
-                        let _ = try await userVM.signUp(sendEmail: userVM.email, sendPassword: userVM.password)
-                        
+                        let _ = try await userVM.signUp(sendEmail: userVM.email, sendPassword: userVM.password)              
                     }
                     // Connexion
                     Task {
@@ -60,17 +76,7 @@ struct SignUpView: View {
                 }
             },
                 label: {
-                Text("Sign Up")
-                    .font(.title3)
-                    .foregroundColor(.white)
-                    .padding()
-                    .background(
-                        RoundedRectangle(cornerRadius: 8)
-                    .foregroundColor(.blue)
-                            
-                )
-                
-                
+                Text("Sign Up") 
             })
         }.padding()
     }

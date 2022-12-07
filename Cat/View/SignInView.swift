@@ -12,33 +12,58 @@ struct SignInView: View {
     @EnvironmentObject var userVM: UserViewModel
     
     var body: some View {
-        
         NavigationView {
+        
+        ZStack{
+            backgroundGradient
+                .ignoresSafeArea()
             
-            
-            VStack(spacing: 20) {
-                Text ("Connexion")
-                    .foregroundColor(.black)
-                    .font(.largeTitle)
+        
                 
-                
-                TextField("Email", text: $userVM.email)
-                    .font(.title3)
-                    .textFieldStyle(RoundedBorderTextFieldStyle ())
-                    .keyboardType(.emailAddress)
-                    .textInputAutocapitalization(.never)
-                
-                SecureField("Mot de passe", text: $userVM.password)
-                    .font(.title3)
-                    .textFieldStyle(RoundedBorderTextFieldStyle ())
-                    .textContentType(.password)
-                
+
                 
                 Button {
                     Task {
                         let _ = try await userVM.signIn(email: userVM.email, password: userVM.password)                        
                     }
                 } label: {
+
+                VStack{
+                    
+                    
+                    Text("  Chasse aux trésors")
+                        .font(.custom("Chasse aux trésors", size:45))
+                        .foregroundColor(.yellow)
+                        .shadow(color:.black, radius: 0, x:5, y:5)
+                    
+                    
+                    Spacer()
+                }.padding(.top, 80)
+                
+                
+            
+                
+                VStack(spacing: 20) {
+                    
+                    LottieView(lottieFile: "tresor")
+                        .frame(width: 300, height: 300)
+                    Text ("Connexion")
+                        .foregroundColor(.black)
+                        .font(.largeTitle)
+                    
+                    
+                    TextField("Email", text: $userVM.email)
+                        .font(.title3)
+                        .textFieldStyle(RoundedBorderTextFieldStyle ())
+                        .keyboardType(.emailAddress)
+                        .textInputAutocapitalization(.never)
+                    
+                    SecureField("Mot de passe", text: $userVM.password)
+                        .font(.title3)
+                        .textFieldStyle(RoundedBorderTextFieldStyle ())
+                        .textContentType(.password)
+                    
+
                     Text(" Sign In")
                         .font(.title3)
                         .foregroundColor(.white)
@@ -46,6 +71,7 @@ struct SignInView: View {
                         .background(
                             RoundedRectangle(cornerRadius: 8)
                                 .foregroundColor(.blue)
+
                         )
                 }
 
@@ -55,15 +81,15 @@ struct SignInView: View {
                         SignUpView()
                     } label: {
                         Text("Sign Up")
-                    }
-                }
-            }.padding()
-           
-        }
-    }
-    
-}
 
+                    }
+                }.padding()
+                
+            }
+        }
+        
+    }
+}
 struct  SigInView_Previews: PreviewProvider {
     static var previews: some View {
         SignInView()

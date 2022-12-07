@@ -30,6 +30,7 @@ struct UserView: View {
             
             ZStack{
                 backgroundGradient
+                    .ignoresSafeArea()
                 
                 VStack{
                     
@@ -42,7 +43,7 @@ struct UserView: View {
                         Section(
                             header: Text("statistiques")
                                 .font(.headline)
-                                .foregroundColor(.mint)) {
+                                .foregroundColor(.yellow)) {
                                     ForEach(0..<1, id: \.self) { index in
                                         
                                         HStack{
@@ -80,7 +81,10 @@ struct UserView: View {
                                     }.padding(.vertical,12)
                                 }
                         
-                    }.padding()
+                    }.scrollContentBackground(.hidden)
+                       
+                    
+                  
                     
                     
                     
@@ -90,41 +94,49 @@ struct UserView: View {
                         Section(
                             header: Text("Parties enregistrées")
                                 .font(.headline)
-                                .foregroundColor(.mint) ){
+                                .foregroundColor(.blue) ){
                                     ForEach(parties, id:\.self) { partie in
                                         Text(partie.capitalized)
                                     }
                                 }
                         
                         
-                        //      .listRowBackground(
-                        //        Color(.systemFill)
-                        //      .clipped()
-                        // .cornerRadius(10)
-                        //   )
+
+                    }.scrollContentBackground(.hidden)
                         
-                    }.padding()
-                }
-                //.navigationTitle("Statistiques")
                 
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        
-                        NavigationLink(destination: UserSettingView()){
+                }.padding()
+                
+                
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarTrailing) {
                             
-                            Image(systemName: "gear")
+                            
+                            
+                            NavigationLink(destination: UserSettingView(userVM: userVM)){
+                                
+                                Image(systemName: "gear")
+                                    .foregroundColor(.black)
+                            }
+                            
+                            
+                            
+                            
                         }
                     }
-                }
+                
+                
             }
+            
+            
         }
     }
+    
 }
 
 struct UserView_Previews: PreviewProvider {
     static var previews: some View {
-        UserView()
-            .environmentObject(UserViewModel())
+        UserView(userVM: UserViewModel(), user:User(id: 1, email: "user1@mail.com",password: "123", pseudo: "user1", totPoint: 200, gameCounter: 10) )
         
         
     }

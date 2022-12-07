@@ -14,34 +14,40 @@ struct WaitingRoom: View {
     var numbers:[Int] = [7, 54, 21]
     
     var body: some View {
-        VStack{
-            Text("Code d'accès du salon")
-            RoundedRectangle(cornerRadius: 20)
-                .stroke(.gray, lineWidth: 2)
-                .frame(width: 120, height: 60)
-                .foregroundColor(.white)
-                .overlay(
-                    Text(code)
-                        .font(.title)
-                )
-                .padding()
-            
-            HStack {
-                Text("\(users.count) joueurs en attente")
-                    .padding(.trailing)
-                DotView()
-                DotView(delay: 0.2)
-                DotView(delay: 0.4)
-            }
-            .padding(.bottom)
-
-            Rectangle()
-                .frame(width: 350, height: 2)
+        ZStack {
+            LinearGradient(colors: [.yellow, .blue], startPoint: .bottom, endPoint: .top)
+                .ignoresSafeArea()
+            VStack{
+                Text("Code d'accès du salon")
+                RoundedRectangle(cornerRadius: 20)
+                    .stroke(.white, lineWidth: 2)
+                    .frame(width: 120, height: 60)
+                    .foregroundColor(.white)
+                    .overlay(
+                        Text(code)
+                            .font(.title)
+                    )
+                    .padding()
+                
+                HStack {
+                    Text("\(users.count) joueurs en attente")
+                        .padding(.trailing)
+                    DotView()
+                    DotView(delay: 0.2)
+                    DotView(delay: 0.4)
+                }
                 .padding(.bottom)
 
-            ScrollView{
-                ForEach(users){ user in
-                    CustList(pseudo: user.pseudo)
+                Rectangle()
+                    .frame(width: 350, height: 2)
+                    .padding(.bottom)
+
+                ScrollView(showsIndicators: false){
+                    ForEach(users){ user in
+                        CustList(pseudo: user.pseudo)
+                            
+                    }
+                    
                 }
             }
         }

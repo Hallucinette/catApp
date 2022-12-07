@@ -19,11 +19,17 @@ struct LeadBoardView: View {
     var body: some View {
         ZStack{
             backgroundGradient3
+                .ignoresSafeArea()
+            
+                
             VStack{
                 
-                Image("winning")
-                    .resizable()
-                    .frame(width: 150.0, height: 150.0)
+                LottieView(lottieFile: "podium")
+                    .frame(width: 200, height: 200)
+                
+             //   Image("winning")
+              //      .resizable()
+              //      .frame(width: 150.0, height: 150.0)
                 Text("VICTOIRE")
                     .foregroundColor(.black)
                     .bold()
@@ -40,7 +46,7 @@ struct LeadBoardView: View {
                                 Image(systemName: "star.fill")
                             }
                             .font(.headline)
-                            .foregroundColor(.mint)
+                            .foregroundColor(.yellow)
                     
                     ){
                                 ForEach(0..<1, id: \.self) { index in
@@ -69,7 +75,7 @@ struct LeadBoardView: View {
                              
                             }
                             .font(.headline)
-                            .foregroundColor(.mint)
+                            .foregroundColor(.blue)
                     
                     ){
                                 ForEach(0..<3, id: \.self) { index in
@@ -91,7 +97,8 @@ struct LeadBoardView: View {
                                 }
                     }.padding(.vertical,14)
                     
-                }
+                }.scrollContentBackground(.hidden)
+                    
                
                 Button {
                     
@@ -111,7 +118,7 @@ struct LeadBoardView: View {
                 }
             }.padding()
             
-        }.padding()
+        }
        
     }
 }

@@ -10,11 +10,13 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var userVM: UserViewModel
     var body: some View {
+
         if userVM.isConnected {
             Text("Connecté")
         } else {
             SignUpView()
         }
+
     }
 }
 

@@ -10,15 +10,17 @@ import SwiftUI
 let backgroundGradient2 = LinearGradient(
     colors: [Color.blue, Color.yellow],
     startPoint: .top, endPoint: .bottom)
+   
 
 
 struct UserSettingView: View {
     
-        
         @EnvironmentObject var userVM: UserViewModel
       
+
         @State private var email = ""
         @State private var newEmail = ""
+        @State private var confirmedEmail = ""
     
     
     private let PasswordToConfirmAgainst = "12345"
@@ -41,6 +43,21 @@ struct UserSettingView: View {
     
     
     
+    
+    private func isEmailValid() -> Bool {
+        if email != EmailToConfirmAgainst {
+            return false
+        }
+        
+        if !newEmail.isEmpty && newEmail == confirmedEmail {
+            return true
+        }
+        
+        return false
+    }
+    
+    
+    
 
         var body: some View {
             ZStack{
@@ -55,14 +72,18 @@ struct UserSettingView: View {
                         Section(
                             header: Text("Modifier mot de passe")
                                 .font(.headline)
-                                .foregroundColor(.mint)) {
-                                    SecureField("Enter old password", text: $password)
-                                    SecureField("New Password", text: $newPassword)
-                                    SecureField("Confirm New Password", text: $confirmedPassword)
+                                .foregroundColor(.yellow)) {
+                                    SecureField("Enter ancien mot de passe", text: $password)
+                                    SecureField("Nouveau mot de passe", text: $newPassword)
+                                    SecureField("Confirmer nouveau mot de passe", text: $confirmedPassword)
                                 }
-                                    if self.isPasswordValid() {
+                        
+                        
+                                  if self.isPasswordValid() {
+                        
                                         Button(action: {
-                                            print("Updated password")
+                                           // print("Updated password")
+                                            
                                         }, label: {
                                             Text("Votre mot de passe a été changé")
                                         })
@@ -75,12 +96,27 @@ struct UserSettingView: View {
                         Section(
                             header: Text("Modifier Email")
                                 .font(.headline)
-                                .foregroundColor(.mint)) {
+                                .foregroundColor(.blue)) {
                                     TextField("Enter ancien email", text: $email)
-                                    TextField("Enter nouveau email", text: $newEmail)
-                                }.padding()
+                                    
+                                    TextField("Nouveau email", text: $newEmail)
+                                    TextField("Confirmer nouveau email", text: $confirmedEmail)
+                                }
+                                .textInputAutocapitalization(.never)
                         
+                                    if self.isEmailValid() {
+                                        Button(action: {
+                                            print("Updated password")
+                                        }, label: {
+                                            Text("Votre email a été changé")
+                                        })
+                                    }
+                        
+                    }.scrollContentBackground(.hidden)
+                        
+
                     }.cornerRadius(20)
+
                     
                     Button {
                         
@@ -97,8 +133,11 @@ struct UserSettingView: View {
                         
                         Spacer()
                         
-                    }.padding(.top, 100)
+
                     
+
+                    }.padding(.top,150)
+
                     
                     
                     
