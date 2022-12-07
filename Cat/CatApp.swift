@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct CatApp: App {
+    @StateObject var userVM = UserViewModel()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(userVM)
             
         }
     }

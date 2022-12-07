@@ -9,9 +9,7 @@ import SwiftUI
 
 struct SignInView: View {
     
-    @ObservedObject var userVM: UserViewModel
-    
-    
+    @EnvironmentObject var userVM: UserViewModel
     
     var body: some View {
         
@@ -35,23 +33,26 @@ struct SignInView: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle ())
                     .textContentType(.password)
                 
-                Text(" Sign In")
-                    .font(.title3)
-                    .foregroundColor(.white)
-                    .padding()
-                    .background(
-                        RoundedRectangle(cornerRadius: 8)
-                            .foregroundColor(.blue)
-                        
-                    )
                 
-                
-             
-                
+                Button {
+                    Task {
+                        let _ = try await userVM.signIn(email: userVM.email, password: userVM.password)                        
+                    }
+                } label: {
+                    Text(" Sign In")
+                        .font(.title3)
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(
+                            RoundedRectangle(cornerRadius: 8)
+                                .foregroundColor(.blue)
+                        )
+                }
+
                 HStack {
                     Text("Don't have an account ?")
                     NavigationLink {
-                        SignUpView(userVM: userVM)
+                        SignUpView()
                     } label: {
                         Text("Sign Up")
                     }
@@ -65,6 +66,7 @@ struct SignInView: View {
 
 struct  SigInView_Previews: PreviewProvider {
     static var previews: some View {
-        SignInView(userVM: UserViewModel())
+        SignInView()
+            .environmentObject(UserViewModel())
     }
 }

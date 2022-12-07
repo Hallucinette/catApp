@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ClassementUserView: View {
     
-    @ObservedObject var userVM: UserViewModel
+    @EnvironmentObject var userVM: UserViewModel
     
     var body: some View {
         
@@ -55,6 +55,7 @@ struct ClassementUserView: View {
 
 struct ClassementUserView_Previews: PreviewProvider {
     static var previews: some View {
-        ClassementUserView(userVM: UserViewModel())
+        ClassementUserView()
+            .environmentObject(UserViewModel())
     }
 }

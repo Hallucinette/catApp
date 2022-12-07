@@ -17,6 +17,10 @@
 		53DC2713293EA58B0047A181 /* TreasureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DC2712293EA58B0047A181 /* TreasureViewModel.swift */; };
 		53DC2717293F5E260047A181 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DC2716293F5E260047A181 /* SignInView.swift */; };
 		53DC2719293F5EA10047A181 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DC2718293F5EA10047A181 /* SignUpView.swift */; };
+		70B4DE8829409C7000AE518E /* KeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B4DE8729409C7000AE518E /* KeychainItem.swift */; };
+		70B4DE8A29409C9100AE518E /* SignInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B4DE8929409C9100AE518E /* SignInResponse.swift */; };
+		70B4DE8C2940C98600AE518E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B4DE8B2940C98600AE518E /* HomeView.swift */; };
+		70D1E598293F82EC00B66DB9 /* UserVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D1E597293F82EC00B66DB9 /* UserVM.swift */; };
 		7BC513D4293750F400DE0CE9 /* CatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC513D3293750F400DE0CE9 /* CatApp.swift */; };
 		7BC513D6293750F400DE0CE9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC513D5293750F400DE0CE9 /* ContentView.swift */; };
 		7BC513D8293750F400DE0CE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BC513D7293750F400DE0CE9 /* Assets.xcassets */; };
@@ -26,8 +30,6 @@
 		7BC513ED2937665000DE0CE9 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC513EC2937665000DE0CE9 /* GameModel.swift */; };
 		7BC513EF2937666600DE0CE9 /* ParticipantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC513EE2937666600DE0CE9 /* ParticipantModel.swift */; };
 		7BC513F12937668B00DE0CE9 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC513F02937668B00DE0CE9 /* UserModel.swift */; };
-		7BC513F3293766E900DE0CE9 /* DeleteFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC513F2293766E900DE0CE9 /* DeleteFile.swift */; };
-		7BC513F729376C2400DE0CE9 /* DeleteFile1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC513F629376C2400DE0CE9 /* DeleteFile1.swift */; };
 		7BC513F9293770EE00DE0CE9 /* ButtonCust.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC513F8293770EE00DE0CE9 /* ButtonCust.swift */; };
 		7BC513FB2937729B00DE0CE9 /* Button&Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC513FA2937729B00DE0CE9 /* Button&Color.swift */; };
 		7BC513FD29379BC200DE0CE9 /* CodeGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC513FC29379BC200DE0CE9 /* CodeGameView.swift */; };
@@ -50,6 +52,10 @@
 		53DC2712293EA58B0047A181 /* TreasureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureViewModel.swift; sourceTree = "<group>"; };
 		53DC2716293F5E260047A181 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		53DC2718293F5EA10047A181 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		70B4DE8729409C7000AE518E /* KeychainItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItem.swift; sourceTree = "<group>"; };
+		70B4DE8929409C9100AE518E /* SignInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponse.swift; sourceTree = "<group>"; };
+		70B4DE8B2940C98600AE518E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		70D1E597293F82EC00B66DB9 /* UserVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVM.swift; sourceTree = "<group>"; };
 		7BC513D0293750F400DE0CE9 /* Cat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BC513D3293750F400DE0CE9 /* CatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatApp.swift; sourceTree = "<group>"; };
 		7BC513D5293750F400DE0CE9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,8 +66,6 @@
 		7BC513EC2937665000DE0CE9 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		7BC513EE2937666600DE0CE9 /* ParticipantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantModel.swift; sourceTree = "<group>"; };
 		7BC513F02937668B00DE0CE9 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		7BC513F2293766E900DE0CE9 /* DeleteFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteFile.swift; sourceTree = "<group>"; };
-		7BC513F629376C2400DE0CE9 /* DeleteFile1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteFile1.swift; sourceTree = "<group>"; };
 		7BC513F8293770EE00DE0CE9 /* ButtonCust.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCust.swift; sourceTree = "<group>"; };
 		7BC513FA2937729B00DE0CE9 /* Button&Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button&Color.swift"; sourceTree = "<group>"; };
 		7BC513FC29379BC200DE0CE9 /* CodeGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeGameView.swift; sourceTree = "<group>"; };
@@ -84,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		70D1E596293F82D500B66DB9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				70B4DE8729409C7000AE518E /* KeychainItem.swift */,
+				70D1E597293F82EC00B66DB9 /* UserVM.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		7BC513C7293750F400DE0CE9 = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +143,7 @@
 				7BC513EC2937665000DE0CE9 /* GameModel.swift */,
 				7BC513E6293765F400DE0CE9 /* TreasureModel.swift */,
 				7BC513EA2937662F00DE0CE9 /* MapPointModel.swift */,
+				70B4DE8929409C9100AE518E /* SignInResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -137,12 +151,12 @@
 		7BC513E4293765AC00DE0CE9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				7BC513F629376C2400DE0CE9 /* DeleteFile1.swift */,
 				5356BACB2937719F00492851 /* UserViewModel.swift */,
 				7BC514062938FFEF00DE0CE9 /* UserWaitVM.swift */,
 				7BC513FA2937729B00DE0CE9 /* Button&Color.swift */,
 				7BC5140129389DA400DE0CE9 /* ViewTextField.swift */,
 				53DC2712293EA58B0047A181 /* TreasureViewModel.swift */,
+				70D1E596293F82D500B66DB9 /* Extension */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -150,7 +164,6 @@
 		7BC513E5293765B600DE0CE9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7BC513F2293766E900DE0CE9 /* DeleteFile.swift */,
 				5356BAC92937718200492851 /* UserView.swift */,
 				5318EF68293E2C3700A87B59 /* UserSettingView.swift */,
 				5356BACD2937AD8A00492851 /* ClassementView.swift */,
@@ -160,6 +173,7 @@
 				7BC514032938FF1300DE0CE9 /* WaitingRoom.swift */,
 				53DC2710293EA54E0047A181 /* TreasureView.swift */,
 				53DC2716293F5E260047A181 /* SignInView.swift */,
+				70B4DE8B2940C98600AE518E /* HomeView.swift */,
 				53DC2718293F5EA10047A181 /* SignUpView.swift */,
 				7BC513FE29379BEC00DE0CE9 /* Helpers */,
 			);
@@ -247,9 +261,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70B4DE8829409C7000AE518E /* KeychainItem.swift in Sources */,
 				7BC5140029379C0B00DE0CE9 /* LogoCAT.swift in Sources */,
 				7BC513D6293750F400DE0CE9 /* ContentView.swift in Sources */,
+				70B4DE8C2940C98600AE518E /* HomeView.swift in Sources */,
 				5356BACC2937719F00492851 /* UserViewModel.swift in Sources */,
+				70B4DE8A29409C9100AE518E /* SignInResponse.swift in Sources */,
 				7BC5140D293A067E00DE0CE9 /* DotView.swift in Sources */,
 				7BC514072938FFEF00DE0CE9 /* UserWaitVM.swift in Sources */,
 				7BC513F9293770EE00DE0CE9 /* ButtonCust.swift in Sources */,
@@ -262,15 +279,14 @@
 				7BC513EB2937662F00DE0CE9 /* MapPointModel.swift in Sources */,
 				7BC514092939074000DE0CE9 /* CustList.swift in Sources */,
 				7BC513E7293765F400DE0CE9 /* TreasureModel.swift in Sources */,
-				7BC513F729376C2400DE0CE9 /* DeleteFile1.swift in Sources */,
 				5398549B293CF0A200BF7CCF /* LeadBoardView.swift in Sources */,
+				70D1E598293F82EC00B66DB9 /* UserVM.swift in Sources */,
 				7BC513EF2937666600DE0CE9 /* ParticipantModel.swift in Sources */,
 				53985499293AB30000BF7CCF /* ClassementUserView.swift in Sources */,
 				5356BACA2937718200492851 /* UserView.swift in Sources */,
 				5356BACE2937AD8A00492851 /* ClassementView.swift in Sources */,
 				7BC5140229389DA400DE0CE9 /* ViewTextField.swift in Sources */,
 				7BC513FD29379BC200DE0CE9 /* CodeGameView.swift in Sources */,
-				7BC513F3293766E900DE0CE9 /* DeleteFile.swift in Sources */,
 				53DC2719293F5EA10047A181 /* SignUpView.swift in Sources */,
 				7BC513ED2937665000DE0CE9 /* GameModel.swift in Sources */,
 				53DC2711293EA54E0047A181 /* TreasureView.swift in Sources */,
@@ -403,6 +419,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Cat/Preview Content\"";
+				DEVELOPMENT_TEAM = CDT2LZXUGZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -431,6 +448,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Cat/Preview Content\"";
+				DEVELOPMENT_TEAM = CDT2LZXUGZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

@@ -15,7 +15,7 @@ let backgroundGradient2 = LinearGradient(
 struct UserSettingView: View {
     
         
-        @ObservedObject var userVM: UserViewModel
+        @EnvironmentObject var userVM: UserViewModel
       
         @State private var email = ""
         @State private var newEmail = ""
@@ -45,14 +45,12 @@ struct UserSettingView: View {
         var body: some View {
             ZStack{
                 backgroundGradient2
+                    .ignoresSafeArea()
                 
                 VStack{
                     
-                    Image(systemName: "person.circle")
-                    
+                    Image(systemName: "person.circle")    
                         .font(.system(size: 90, weight: .medium))
-                    
-                    
                     Form{
                         Section(
                             header: Text("Modifier mot de passe")
@@ -82,7 +80,7 @@ struct UserSettingView: View {
                                     TextField("Enter nouveau email", text: $newEmail)
                                 }.padding()
                         
-                    }
+                    }.cornerRadius(20)
                     
                     Button {
                         
@@ -99,7 +97,8 @@ struct UserSettingView: View {
                         
                         Spacer()
                         
-                    }.padding()
+                    }.padding(.top, 100)
+                    
                     
                     
                     
@@ -128,6 +127,7 @@ struct UserSettingView: View {
 
 struct UserSettingView_Previews: PreviewProvider {
     static var previews: some View {
-        UserSettingView(userVM: UserViewModel())
+        UserSettingView()
+            .environmentObject(UserViewModel())
     }
 }

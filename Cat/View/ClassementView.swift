@@ -19,7 +19,7 @@ let backgroundGradient1 = LinearGradient(
 
 struct ClassementView: View {
     
-    @ObservedObject var userVM: UserViewModel
+    @EnvironmentObject var userVM: UserViewModel
     
     @State private var showConfirm = false
     @State private var indexSetToDelete: IndexSet?
@@ -120,7 +120,8 @@ struct ClassementView: View {
     
     struct ClassementView_Previews: PreviewProvider {
         static var previews: some View {
-            ClassementView(userVM: UserViewModel())
+            ClassementView()
+                .environmentObject(UserViewModel())
         }
     }
     

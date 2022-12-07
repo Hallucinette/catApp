@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SignUpView: View {
     
-    @ObservedObject var userVM: UserViewModel
+    @EnvironmentObject var userVM: UserViewModel
     
     
     var body: some View {
@@ -23,14 +23,16 @@ struct SignUpView: View {
                .textFieldStyle(RoundedBorderTextFieldStyle ())
                .keyboardType(.emailAddress)
                .textInputAutocapitalization(.never)
+               .autocorrectionDisabled(true)
               
                 
-            TextField("Confirmer Email", text: $userVM.email)
+            TextField("Confirmer Email", text: $userVM.repeatEmail)
                .font(.title3)
                .textFieldStyle(RoundedBorderTextFieldStyle ())
                .textContentType(.emailAddress)
                .keyboardType(.emailAddress)
                .textInputAutocapitalization(.never)
+               .autocorrectionDisabled(true)
             
             SecureField("Mot de passe", text: $userVM.password)
                 .font(.title3)
@@ -39,10 +41,24 @@ struct SignUpView: View {
              
             
             Button(action: {
-                
-                
+             // Action inscription
+                if userVM.email == userVM.repeatEmail {
+                    
+                    // Inscription
+                    Task {
+                        print("go inscription")
+                        let _ = try await userVM.signUp(sendEmail: userVM.email, sendPassword: userVM.password)
+                        
+                    }
+                    // Connexion
+                    Task {
+                        try await Task.sleep(nanoseconds: 3_000_000_000)
+                        print("go connexion")
+                        let _ = try await userVM.signIn(email: userVM.email, password: userVM.password)
+                        userVM.isConnected = true
+                    }
+                }
             },
-                   
                 label: {
                 Text("Sign Up")
                     .font(.title3)
@@ -56,15 +72,13 @@ struct SignUpView: View {
                 
                 
             })
-            
-            
-            
         }.padding()
     }
 }
 
 struct SignUpViewPreviews: PreviewProvider {
     static var previews: some View {
-        SignUpView(userVM: UserViewModel())
+        SignUpView()
+            .environmentObject(UserViewModel())
     }
 }
