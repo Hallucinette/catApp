@@ -13,56 +13,69 @@ struct SignUpView: View {
     
     
     var body: some View {
-        VStack(spacing: 20) {
-            Text ("Inscription")
-                .foregroundColor(.black)
-                .font(.largeTitle)
-            
-            TextField("Email", text: $userVM.email)
-               .font(.title3)
-               .textFieldStyle(RoundedBorderTextFieldStyle ())
-               .keyboardType(.emailAddress)
-               .textInputAutocapitalization(.never)
-              
+        
+        ZStack{
+            backgroundGradient
+                .ignoresSafeArea()
+            VStack{
+                Text("  Chasse aux trésors")
+                    .font(.custom("Chasse aux trésors", size:45))
+                    .foregroundColor(.yellow)
+                    .shadow(color:.black, radius: 2, x:5, y:5)
                 
-            TextField("Confirmer email", text: $userVM.email)
-               .font(.title3)
-               .textFieldStyle(RoundedBorderTextFieldStyle ())
-               .textContentType(.emailAddress)
-               .keyboardType(.emailAddress)
-               .textInputAutocapitalization(.never)
+                Spacer()
+            }.padding()
             
-            SecureField("Mot de passe", text: $userVM.password)
-                .font(.title3)
-                .textFieldStyle(RoundedBorderTextFieldStyle ())
-                .textContentType(.password)
-             
-            
-            Button(action: {
+            VStack(spacing: 20) {
+                Text ("Inscription")
+                    .foregroundColor(.black)
+                    .font(.largeTitle)
                 
-                
-            },
-                   
-                label: {
-                Text("Sign Up")
+                TextField("Email", text: $userVM.email)
                     .font(.title3)
-                    .foregroundColor(.white)
-                    .padding()
-                    .background(
-                        RoundedRectangle(cornerRadius: 8)
-                    .foregroundColor(.blue)
+                    .textFieldStyle(RoundedBorderTextFieldStyle ())
+                    .keyboardType(.emailAddress)
+                    .textInputAutocapitalization(.never)
+                
+                
+                TextField("Confirmer email", text: $userVM.email)
+                    .font(.title3)
+                    .textFieldStyle(RoundedBorderTextFieldStyle ())
+                    .textContentType(.emailAddress)
+                    .keyboardType(.emailAddress)
+                    .textInputAutocapitalization(.never)
+                
+                SecureField("Mot de passe", text: $userVM.password)
+                    .font(.title3)
+                    .textFieldStyle(RoundedBorderTextFieldStyle ())
+                    .textContentType(.password)
+                
+                
+                Button(action: {
+                    
+                    
+                },
+                       
+                       label: {
+                    Text("Sign Up")
+                        .font(.title3)
+                        .foregroundColor(.white)
+                        .padding()
+                        .background(
+                            RoundedRectangle(cornerRadius: 8)
+                                .foregroundColor(.blue)
                             
-                )
+                        )
+                    
+                    
+                })
                 
                 
-            })
-            
-            
-            
-        }.padding()
+                
+            }.padding()
+        }
     }
 }
-
 struct SignUpViewPreviews: PreviewProvider {
     static var previews: some View {
         SignUpView(userVM: UserViewModel())
