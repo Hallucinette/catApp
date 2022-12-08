@@ -16,11 +16,11 @@ struct DotView: View {
         Circle()
             .frame(width: 15, height: 15)
             .scaleEffect(scale) // 2
-            .onAppear{ // 1
-                withAnimation(.easeInOut.repeatForever().delay(delay)) {  // 2
-                    self.scale = 1 //3
-                }
-            }
+//            .onAppear{ // 1
+//                withAnimation(.easeInOut.repeatForever().delay(delay)) {  // 2
+//                    self.scale = 1 //3
+//                }
+//            }
     }
 }
 

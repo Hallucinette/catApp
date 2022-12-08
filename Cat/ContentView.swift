@@ -9,14 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var userVM: UserViewModel
+    @EnvironmentObject var locationManager : LocationManager
+    @EnvironmentObject var addTargetVM : AddTargetViewModel
+    @EnvironmentObject var GameVM : GameViewModel
+    
     var body: some View {
+        
 
-        if userVM.isConnected {
-            Text("Connecté")
+        if UserDefaults.standard.value(forKey: "userId") != nil {
+            HomeView()
+//                .onAppear {
+//                    UserDefaults.standard.removeObject(forKey: "userId")
+//                }
         } else {
-            SignUpView()
+            SignInView()
         }
-
+        
+        
+        
     }
 }
 
@@ -24,5 +34,8 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .environmentObject(UserViewModel())
+            .environmentObject(AddTargetViewModel())
+            .environmentObject(LocationManager())
+            .environmentObject(GameViewModel())
     }
 }

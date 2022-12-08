@@ -14,7 +14,7 @@ extension UserViewModel {
     func signUp(sendEmail: String, sendPassword: String) async throws -> (User) {
         
         // MARK: - URL DE LA REQUEST
-        guard let url = URL(string: "http://localhost:8080/api/auth/signup" )
+        guard let url = URL(string: baseUrl + endPointSignUp )
         else {
             fatalError("Missing URL")
         }
@@ -43,7 +43,7 @@ extension UserViewModel {
     func signIn(email: String, password: String ) async throws -> (SignInResponse) {
         
         // MARK: - URL DE LA REQUEST
-        guard let url = URL(string: "http://localhost:8080/api/auth/signin")
+        guard let url = URL(string: baseUrl + endPointSignIn)
         else {
             fatalError("Missing URL")
         }
@@ -69,17 +69,25 @@ extension UserViewModel {
         print("succes: \(response.accessToken)")
         let keychainItem = KeychainItem(service: "com.ameliepocchiolo.Cat", account: "accessToken")
         try keychainItem.saveItem(response.accessToken)
-        UserDefaults.standard.set(response.id, forKey: "UserId")
+        UserDefaults.standard.set(response.id, forKey: "userId")
+        UserDefaults.standard.set(response.id, forKey: "email")
+        DispatchQueue.main.async {
+            self.isConnected = true
+        }
+        
         return response
         
     }
     
     // MARK: - GET USER INFO
-    func getUser() async throws -> (User) {
-        guard let url = URL(string: "\(baseUrl)/\(user.id)")
+    func getUser() async throws -> (UserResponse) {
+        let userId: String = UserDefaults.standard.string(forKey: "userId")!
+        
+        guard let url = URL(string: baseUrl + "/users/" + userId)
         else {
             fatalError("Missing URL")
         }
+        print(url)
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = "GET"
         urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -92,7 +100,7 @@ extension UserViewModel {
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         
-        let user = try decoder.decode(User.self, from: data)
+        let user = try decoder.decode(UserResponse.self, from: data)
        
         
         print("succes: \(user)")

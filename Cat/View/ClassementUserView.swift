@@ -46,15 +46,8 @@ struct ClassementUserView: View {
                         }
                         
                     }.scrollContentBackground(.hidden)
-                        
-                    
-                    
-                    
                 }.padding()
                     .navigationBarTitle("Classement")
-              
-                
-               
             }
         }
     }

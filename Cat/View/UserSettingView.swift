@@ -10,23 +10,27 @@ import SwiftUI
 let backgroundGradient2 = LinearGradient(
     colors: [Color.blue, Color.yellow],
     startPoint: .top, endPoint: .bottom)
-   
+
 
 
 struct UserSettingView: View {
     
-        @EnvironmentObject var userVM: UserViewModel
-      
-
-        @State private var email = ""
-        @State private var newEmail = ""
-        @State private var confirmedEmail = ""
+    
+    @EnvironmentObject var userVM: UserViewModel
+    
+    
+    private let EmailToConfirmAgainst = "user@email.com"
+    @State private var email = ""
+    @State private var newEmail = ""
+    @State private var confirmedEmail = ""
     
     
     private let PasswordToConfirmAgainst = "12345"
     @State private var password = ""
     @State private var newPassword = ""
     @State private var confirmedPassword = ""
+    @Binding var pop: Bool
+    @Binding var rootIsActive: Bool
     
     
     private func isPasswordValid() -> Bool {
@@ -40,9 +44,6 @@ struct UserSettingView: View {
         
         return false
     }
-    
-    
-    
     
     private func isEmailValid() -> Bool {
         if email != EmailToConfirmAgainst {
@@ -58,115 +59,90 @@ struct UserSettingView: View {
     
     
     
-
-        var body: some View {
-            ZStack{
-                backgroundGradient2
-                    .ignoresSafeArea()
+    
+    var body: some View {
+        ZStack{
+            backgroundGradient2
+                .ignoresSafeArea()
+            
+            VStack{
                 
-                VStack{
+                Image(systemName: "person.circle")
+                
+                    .font(.system(size: 90, weight: .medium))
+                
+                Form{
+                    Section(
+                        header: Text("Modifier mot de passe")
+                            .font(.headline)
+                            .foregroundColor(.yellow)) {
+                                SecureField("Enter ancien mot de passe", text: $password)
+                                SecureField("Nouveau mot de passe", text: $newPassword)
+                                SecureField("Confirmer nouveau mot de passe", text: $confirmedPassword)
+                            }
                     
-                    Image(systemName: "person.circle")    
-                        .font(.system(size: 90, weight: .medium))
-                    Form{
-                        Section(
-                            header: Text("Modifier mot de passe")
-                                .font(.headline)
-                                .foregroundColor(.yellow)) {
-                                    SecureField("Enter ancien mot de passe", text: $password)
-                                    SecureField("Nouveau mot de passe", text: $newPassword)
-                                    SecureField("Confirmer nouveau mot de passe", text: $confirmedPassword)
-                                }
+                    if self.isPasswordValid() {
                         
-                        
-                                  if self.isPasswordValid() {
-                        
-                                        Button(action: {
-                                           // print("Updated password")
-                                            
-                                        }, label: {
-                                            Text("Votre mot de passe a été changé")
-                                        })
-                                    }
+                        Button(action: {
+                            // print("Updated password")
+                            
+                        }, label: {
+                            Text("Votre mot de passe a été changé")
+                        })
+                    }
+                    Section(
+                        header: Text("Modifier Email")
+                            .font(.headline)
+                            .foregroundColor(.blue)) {
+                                TextField("Enter ancien email", text: $email)
                                 
-                        
-                      
-                        
-                        
-                        Section(
-                            header: Text("Modifier Email")
-                                .font(.headline)
-                                .foregroundColor(.blue)) {
-                                    TextField("Enter ancien email", text: $email)
-                                    
-                                    TextField("Nouveau email", text: $newEmail)
-                                    TextField("Confirmer nouveau email", text: $confirmedEmail)
-                                }
-                                .textInputAutocapitalization(.never)
-                        
-                                    if self.isEmailValid() {
-                                        Button(action: {
-                                            print("Updated password")
-                                        }, label: {
-                                            Text("Votre email a été changé")
-                                        })
-                                    }
-                        
-                    }.scrollContentBackground(.hidden)
-                        
-
-                    }.cornerRadius(20)
-
+                                TextField("Nouveau email", text: $newEmail)
+                                TextField("Confirmer nouveau email", text: $confirmedEmail)
+                            }
+                            .textInputAutocapitalization(.never)
                     
-                    Button {
-                        
-                        
-                    } label: {
-                        Text("Déconnexion")
-                            .foregroundColor(.red)
-                        
-                            .frame(width: 250 - 10)
-                            .padding(5)
-                            .background(Color(white: 0.9))
-                            .cornerRadius(10)
-                            .frame(maxWidth:.infinity, minHeight:44)
-                        
-                        Spacer()
-                        
-
+                    if self.isEmailValid() {
+                        Button(action: {
+                            print("Updated password")
+                        }, label: {
+                            Text("Votre email a été changé")
+                        })
+                    }
+                }.scrollContentBackground(.hidden)
+                Button {
+#warning("deconnexion")
+                    UserDefaults.standard.removeObject(forKey: "userId")
+                    pop = false
+                    rootIsActive = false
                     
-
-                    }.padding(.top,150)
-
+                } label: {
+                    Text("Déconnexion")
+                        .foregroundColor(.red)
                     
+                        .frame(width: 250 - 10)
+                        .padding(5)
+                        .background(Color(white: 0.9))
+                        .cornerRadius(10)
+                        .frame(maxWidth:.infinity, minHeight:44)
                     
+                    Spacer()
                     
-                    }.padding()
+                }.padding(.top,150)
                     
-                    
-                   
-                    
-                    
-                    
-                    
-                }
-                
-            }
-            
-            
-            
-            
-            
+            }.padding()
         }
-    
-        
+    }
+}
 
-    
+
+
+
 
 
 struct UserSettingView_Previews: PreviewProvider {
     static var previews: some View {
-        UserSettingView()
+        UserSettingView(pop: .constant(true), rootIsActive: .constant(true))
             .environmentObject(UserViewModel())
     }
 }
+

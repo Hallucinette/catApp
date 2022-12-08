@@ -16,6 +16,8 @@ class UserViewModel: ObservableObject {
     @Published var newPassword = ""
     @Published var isConnected = false
     
+    @Published var userResponse: UserResponse = UserResponse(id: 1, email: "", totalPoints: 0, gameCount: 0, createdAt: "")
+    
     @Published var user: User = User(id: 1, email: "test@test.com", password: "123", pseudo: "arktik", totPoint: 0, gameCounter: 0)
     
     @Published var users: [User] = [
@@ -51,29 +53,39 @@ class UserViewModel: ObservableObject {
     // Urls pour l'API
    var baseUrl = "http://localhost:8080"
     var endPointSignIn = "/api/auth/signin"
-    var endPointSignUp = ")/api/auth/signup"
+    var endPointSignUp = "/api/auth/signup"
     
-    // - MARK: Fonction READ
-   // func getUserFromApi() async throws -> ([User]) {
-      //  guard let url = URL(string: "\(endPoint)/users")
-       // else {
-      //      fatalError("Missing URL")
-    //    }
-    //    var urlRequest = URLRequest(url: url)
-    //    urlRequest.httpMethod = "GET"
-     //   let (data, response) = try await URLSession.shared.data(for: urlRequest)
-     //   guard (response as? HTTPURLResponse)?.statusCode == 200
-     //   else {
-      //      fatalError("Error while fetching data")
-     //   }
-     //   let decoder = JSONDecoder()
-     //   decoder.keyDecodingStrategy = .convertFromSnakeCase
-      //  let users = try decoder.decode([User].self, from: data)
-        
-    //    print("succes: \(users)")
-     //   return users
-        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     }
     
     
+// - MARK: Fonction READ
+// func getUserFromApi() async throws -> ([User]) {
+//  guard let url = URL(string: "\(endPoint)/users")
+// else {
+//      fatalError("Missing URL")
+//    }
+//    var urlRequest = URLRequest(url: url)
+//    urlRequest.httpMethod = "GET"
+//   let (data, response) = try await URLSession.shared.data(for: urlRequest)
+//   guard (response as? HTTPURLResponse)?.statusCode == 200
+//   else {
+//      fatalError("Error while fetching data")
+//   }
+//   let decoder = JSONDecoder()
+//   decoder.keyDecodingStrategy = .convertFromSnakeCase
+//  let users = try decoder.decode([User].self, from: data)
+
+//    print("succes: \(users)")
+//   return users
+
 //}

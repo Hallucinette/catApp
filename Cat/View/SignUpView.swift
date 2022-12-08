@@ -11,9 +11,8 @@ struct SignUpView: View {
     
     @EnvironmentObject var userVM: UserViewModel
     
-    
     var body: some View {
-
+        
         
         ZStack{
             backgroundGradient
@@ -40,10 +39,10 @@ struct SignUpView: View {
                     .autocorrectionDisabled(true)
                 
                 
-                TextField("Confirmer email", text: $userVM.email)
+                TextField("Confirmer email", text: $userVM.repeatEmail)
                 
                 
-
+                
                     .font(.title3)
                     .textFieldStyle(RoundedBorderTextFieldStyle ())
                     .textContentType(.emailAddress)
@@ -58,27 +57,28 @@ struct SignUpView: View {
                 
                 
                 Button(action: {
-             // Action inscription
-                if userVM.email == userVM.repeatEmail {
-                    
-                    // Inscription
-                    Task {
-                        print("go inscription")
-                        let _ = try await userVM.signUp(sendEmail: userVM.email, sendPassword: userVM.password)              
+                    // Action inscription
+                    if userVM.email == userVM.repeatEmail {
+                        
+                        // Inscription
+                        Task {
+                            print("go inscription")
+                            let _ = try await userVM.signUp(sendEmail: userVM.email, sendPassword: userVM.password)              
+                        }
+                        // Connexion
+                        Task {
+                            try await Task.sleep(nanoseconds: 3_000_000_000)
+                            print("go connexion")
+                            let _ = try await userVM.signIn(email: userVM.email, password: userVM.password)
+                            userVM.isConnected = true
+                        }
                     }
-                    // Connexion
-                    Task {
-                        try await Task.sleep(nanoseconds: 3_000_000_000)
-                        print("go connexion")
-                        let _ = try await userVM.signIn(email: userVM.email, password: userVM.password)
-                        userVM.isConnected = true
-                    }
-                }
-            },
-                label: {
-                Text("Sign Up") 
-            })
-        }.padding()
+                },
+                       label: {
+                    Text("Sign Up") 
+                })
+            }.padding()
+        }
     }
 }
 
