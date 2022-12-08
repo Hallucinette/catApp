@@ -7,19 +7,15 @@
 
 import SwiftUI
 
-let backgroundGradient1 = LinearGradient(
-    colors: [Color.blue, Color.yellow],
-    startPoint: .top, endPoint: .bottom)
+let backgroundGradient6 = LinearGradient(
+   colors: [Color.blue, Color.yellow],
+   startPoint: .top, endPoint: .bottom)
 
-
-//let backgroundGradient1 = LinearGradient(
- //   colors: [Color.mint.opacity(0.5),Color.gray.opacity(0.5), Color.pink.opacity(0.5)],
- //   startPoint: .top, endPoint: .bottom)
 
 
 struct ClassementView: View {
     
-    @ObservedObject var userVM: UserViewModel
+    @EnvironmentObject var userVM: UserViewModel
     
     @State private var showConfirm = false
     @State private var indexSetToDelete: IndexSet?
@@ -35,7 +31,8 @@ struct ClassementView: View {
         NavigationView {
             
             ZStack{
-                backgroundGradient1
+                backgroundGradient6
+                   .ignoresSafeArea()
                 
                 VStack(alignment: .center) {
                     
@@ -51,14 +48,18 @@ struct ClassementView: View {
                                     .foregroundColor(.yellow)
                                    .font(.title2)
                                     .fontWeight(.bold)
+                               
                                 Text(userVM.sortedUsers[index].pseudo)
-                                    .foregroundColor(.blue)
-                                 //   .font(.title2)
+                                  .foregroundColor(.blue)
                                     .fontWeight(.bold)
                                 
                                 Spacer()
                                 
                                 Text("\(userVM.sortedUsers[index].totPoint) Points")
+                                    .foregroundColor(.blue)
+                                
+                                
+                                
                             }
                             
                             
@@ -81,7 +82,9 @@ struct ClassementView: View {
                               }
                         
                         
-                             }.padding()
+                    }.scrollContentBackground(.hidden)
+                        
+                               .cornerRadius(20)
                         
                         
                         Button {
@@ -105,6 +108,7 @@ struct ClassementView: View {
                     }.padding()
                         .navigationBarTitle("Classement")
                         .navigationBarItems(leading: EditButton())
+                        .foregroundColor(.black)
                     
                     
                 }
@@ -120,7 +124,8 @@ struct ClassementView: View {
     
     struct ClassementView_Previews: PreviewProvider {
         static var previews: some View {
-            ClassementView(userVM: UserViewModel())
+            ClassementView()
+                .environmentObject(UserViewModel())
         }
     }
     

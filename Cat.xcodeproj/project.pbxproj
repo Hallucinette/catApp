@@ -7,16 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
+		530613FA293FFE8A00E81DB7 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 530613F9293FFE8A00E81DB7 /* TestView.swift */; };
+		530613FF29409AAB00E81DB7 /* tresor.json in Resources */ = {isa = PBXBuildFile; fileRef = 530613FE29409AAB00E81DB7 /* tresor.json */; };
+		5306140529409BD300E81DB7 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5306140429409BD300E81DB7 /* LottieView.swift */; };
+		5306140729409E1500E81DB7 /* lottieTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5306140629409E1500E81DB7 /* lottieTestView.swift */; };
+		5306142B2940AF9900E81DB7 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 5306142A2940AF9900E81DB7 /* Lottie */; };
+		5306142D2940C43000E81DB7 /* podium.json in Resources */ = {isa = PBXBuildFile; fileRef = 5306142C2940C43000E81DB7 /* podium.json */; };
+		5306142F2940C8BF00E81DB7 /* podium (2).json in Resources */ = {isa = PBXBuildFile; fileRef = 5306142E2940C8BE00E81DB7 /* podium (2).json */; };
+		530614312940C95B00E81DB7 /* podium (3).json in Resources */ = {isa = PBXBuildFile; fileRef = 530614302940C95B00E81DB7 /* podium (3).json */; };
+		530614332940C9F600E81DB7 /* podium (4).json in Resources */ = {isa = PBXBuildFile; fileRef = 530614322940C9F600E81DB7 /* podium (4).json */; };
+		530614352940CAC200E81DB7 /* podium (5).json in Resources */ = {isa = PBXBuildFile; fileRef = 530614342940CAC200E81DB7 /* podium (5).json */; };
+		5318EF69293E2C3700A87B59 /* UserSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5318EF68293E2C3700A87B59 /* UserSettingView.swift */; };
 		5356BACA2937718200492851 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5356BAC92937718200492851 /* UserView.swift */; };
 		5356BACC2937719F00492851 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5356BACB2937719F00492851 /* UserViewModel.swift */; };
 		5356BACE2937AD8A00492851 /* ClassementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5356BACD2937AD8A00492851 /* ClassementView.swift */; };
-		5356BAF4293A317600492851 /* UserModifView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5356BAF3293A317600492851 /* UserModifView.swift */; };
 		53985499293AB30000BF7CCF /* ClassementUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53985498293AB30000BF7CCF /* ClassementUserView.swift */; };
 		5398549B293CF0A200BF7CCF /* LeadBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5398549A293CF0A200BF7CCF /* LeadBoardView.swift */; };
-
-		7B0652F4293D3CF4009385AA /* AddTargetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0652F3293D3CF4009385AA /* AddTargetView.swift */; };
-
+		53DC2711293EA54E0047A181 /* TreasureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DC2710293EA54E0047A181 /* TreasureView.swift */; };
+		53DC2713293EA58B0047A181 /* TreasureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DC2712293EA58B0047A181 /* TreasureViewModel.swift */; };
+		53DC2717293F5E260047A181 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DC2716293F5E260047A181 /* SignInView.swift */; };
+		53DC2719293F5EA10047A181 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DC2718293F5EA10047A181 /* SignUpView.swift */; };
+		7071FCE629416F880015EFA0 /* ReturnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7071FCE529416F880015EFA0 /* ReturnView.swift */; };
+		70B4DE8829409C7000AE518E /* KeychainItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B4DE8729409C7000AE518E /* KeychainItem.swift */; };
+		70B4DE8A29409C9100AE518E /* SignInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B4DE8929409C9100AE518E /* SignInResponse.swift */; };
+		70B4DE8C2940C98600AE518E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B4DE8B2940C98600AE518E /* HomeView.swift */; };
+		70B4DE8E2941015B00AE518E /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B4DE8D2941015B00AE518E /* MapView.swift */; };
+		70B4DE90294101A100AE518E /* AddTargetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B4DE8F294101A100AE518E /* AddTargetView.swift */; };
+		70B4DE92294101D300AE518E /* AddTargetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B4DE91294101D300AE518E /* AddTargetViewModel.swift */; };
+		70B4DE94294102C000AE518E /* Treasure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B4DE93294102C000AE518E /* Treasure.swift */; };
+		70B4DE96294102D900AE518E /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B4DE95294102D900AE518E /* Map.swift */; };
+		70B4DE982941030C00AE518E /* MKCoordinateRegion+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B4DE972941030C00AE518E /* MKCoordinateRegion+Extensions.swift */; };
+		70B4DE9B2941039A00AE518E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B4DE9A2941039A00AE518E /* LocationManager.swift */; };
+		70B4DE9D2941078D00AE518E /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B4DE9C2941078D00AE518E /* GameViewModel.swift */; };
+		70D1E598293F82EC00B66DB9 /* UserVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D1E597293F82EC00B66DB9 /* UserVM.swift */; };
 		7BC513D4293750F400DE0CE9 /* CatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC513D3293750F400DE0CE9 /* CatApp.swift */; };
 		7BC513D6293750F400DE0CE9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC513D5293750F400DE0CE9 /* ContentView.swift */; };
 		7BC513D8293750F400DE0CE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BC513D7293750F400DE0CE9 /* Assets.xcassets */; };
@@ -26,8 +49,6 @@
 		7BC513ED2937665000DE0CE9 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC513EC2937665000DE0CE9 /* GameModel.swift */; };
 		7BC513EF2937666600DE0CE9 /* ParticipantModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC513EE2937666600DE0CE9 /* ParticipantModel.swift */; };
 		7BC513F12937668B00DE0CE9 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC513F02937668B00DE0CE9 /* UserModel.swift */; };
-		7BC513F3293766E900DE0CE9 /* DeleteFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC513F2293766E900DE0CE9 /* DeleteFile.swift */; };
-		7BC513F729376C2400DE0CE9 /* DeleteFile1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC513F629376C2400DE0CE9 /* DeleteFile1.swift */; };
 		7BC513F9293770EE00DE0CE9 /* ButtonCust.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC513F8293770EE00DE0CE9 /* ButtonCust.swift */; };
 		7BC513FB2937729B00DE0CE9 /* Button&Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC513FA2937729B00DE0CE9 /* Button&Color.swift */; };
 		7BC513FD29379BC200DE0CE9 /* CodeGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BC513FC29379BC200DE0CE9 /* CodeGameView.swift */; };
@@ -40,16 +61,38 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-
+		530613F9293FFE8A00E81DB7 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		530613FE29409AAB00E81DB7 /* tresor.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = tresor.json; sourceTree = "<group>"; };
+		5306140429409BD300E81DB7 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		5306140629409E1500E81DB7 /* lottieTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lottieTestView.swift; sourceTree = "<group>"; };
+		5306142C2940C43000E81DB7 /* podium.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = podium.json; sourceTree = "<group>"; };
+		5306142E2940C8BE00E81DB7 /* podium (2).json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "podium (2).json"; sourceTree = "<group>"; };
+		530614302940C95B00E81DB7 /* podium (3).json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "podium (3).json"; sourceTree = "<group>"; };
+		530614322940C9F600E81DB7 /* podium (4).json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "podium (4).json"; sourceTree = "<group>"; };
+		530614342940CAC200E81DB7 /* podium (5).json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "podium (5).json"; sourceTree = "<group>"; };
+		5318EF68293E2C3700A87B59 /* UserSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingView.swift; sourceTree = "<group>"; };
 		5356BAC92937718200492851 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
 		5356BACB2937719F00492851 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		5356BACD2937AD8A00492851 /* ClassementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassementView.swift; sourceTree = "<group>"; };
-		5356BAF3293A317600492851 /* UserModifView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModifView.swift; sourceTree = "<group>"; };
 		53985498293AB30000BF7CCF /* ClassementUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassementUserView.swift; sourceTree = "<group>"; };
 		5398549A293CF0A200BF7CCF /* LeadBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadBoardView.swift; sourceTree = "<group>"; };
-
-		7B0652F3293D3CF4009385AA /* AddTargetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddTargetView.swift; path = ../../../Addtarget/View/AddTargetView.swift; sourceTree = "<group>"; };
-
+		53DC2710293EA54E0047A181 /* TreasureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureView.swift; sourceTree = "<group>"; };
+		53DC2712293EA58B0047A181 /* TreasureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureViewModel.swift; sourceTree = "<group>"; };
+		53DC2716293F5E260047A181 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		53DC2718293F5EA10047A181 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		7071FCE529416F880015EFA0 /* ReturnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnView.swift; sourceTree = "<group>"; };
+		70B4DE8729409C7000AE518E /* KeychainItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItem.swift; sourceTree = "<group>"; };
+		70B4DE8929409C9100AE518E /* SignInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponse.swift; sourceTree = "<group>"; };
+		70B4DE8B2940C98600AE518E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		70B4DE8D2941015B00AE518E /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		70B4DE8F294101A100AE518E /* AddTargetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTargetView.swift; sourceTree = "<group>"; };
+		70B4DE91294101D300AE518E /* AddTargetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTargetViewModel.swift; sourceTree = "<group>"; };
+		70B4DE93294102C000AE518E /* Treasure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Treasure.swift; sourceTree = "<group>"; };
+		70B4DE95294102D900AE518E /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		70B4DE972941030C00AE518E /* MKCoordinateRegion+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKCoordinateRegion+Extensions.swift"; sourceTree = "<group>"; };
+		70B4DE9A2941039A00AE518E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		70B4DE9C2941078D00AE518E /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		70D1E597293F82EC00B66DB9 /* UserVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVM.swift; sourceTree = "<group>"; };
 		7BC513D0293750F400DE0CE9 /* Cat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BC513D3293750F400DE0CE9 /* CatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatApp.swift; sourceTree = "<group>"; };
 		7BC513D5293750F400DE0CE9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,8 +103,6 @@
 		7BC513EC2937665000DE0CE9 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		7BC513EE2937666600DE0CE9 /* ParticipantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantModel.swift; sourceTree = "<group>"; };
 		7BC513F02937668B00DE0CE9 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		7BC513F2293766E900DE0CE9 /* DeleteFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteFile.swift; sourceTree = "<group>"; };
-		7BC513F629376C2400DE0CE9 /* DeleteFile1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteFile1.swift; sourceTree = "<group>"; };
 		7BC513F8293770EE00DE0CE9 /* ButtonCust.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCust.swift; sourceTree = "<group>"; };
 		7BC513FA2937729B00DE0CE9 /* Button&Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button&Color.swift"; sourceTree = "<group>"; };
 		7BC513FC29379BC200DE0CE9 /* CodeGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeGameView.swift; sourceTree = "<group>"; };
@@ -78,12 +119,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5306142B2940AF9900E81DB7 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		70B4DE992941035C00AE518E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				70B4DE9A2941039A00AE518E /* LocationManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		70D1E596293F82D500B66DB9 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				70B4DE8729409C7000AE518E /* KeychainItem.swift */,
+				70D1E597293F82EC00B66DB9 /* UserVM.swift */,
+				70B4DE972941030C00AE518E /* MKCoordinateRegion+Extensions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		7BC513C7293750F400DE0CE9 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +169,7 @@
 				7BC513E12937512B00DE0CE9 /* Model */,
 				7BC513E4293765AC00DE0CE9 /* ViewModel */,
 				7BC513D7293750F400DE0CE9 /* Assets.xcassets */,
+				70B4DE992941035C00AE518E /* Manager */,
 				7BC513D9293750F400DE0CE9 /* Preview Content */,
 			);
 			path = Cat;
@@ -130,6 +191,9 @@
 				7BC513EC2937665000DE0CE9 /* GameModel.swift */,
 				7BC513E6293765F400DE0CE9 /* TreasureModel.swift */,
 				7BC513EA2937662F00DE0CE9 /* MapPointModel.swift */,
+				70B4DE8929409C9100AE518E /* SignInResponse.swift */,
+				70B4DE93294102C000AE518E /* Treasure.swift */,
+				70B4DE95294102D900AE518E /* Map.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -137,14 +201,12 @@
 		7BC513E4293765AC00DE0CE9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				7BC513F629376C2400DE0CE9 /* DeleteFile1.swift */,
-
 				5356BACB2937719F00492851 /* UserViewModel.swift */,
-
+				70B4DE9C2941078D00AE518E /* GameViewModel.swift */,
 				7BC514062938FFEF00DE0CE9 /* UserWaitVM.swift */,
-				7BC513FA2937729B00DE0CE9 /* Button&Color.swift */,
-				7BC5140129389DA400DE0CE9 /* ViewTextField.swift */,
-
+				53DC2712293EA58B0047A181 /* TreasureViewModel.swift */,
+				70B4DE91294101D300AE518E /* AddTargetViewModel.swift */,
+				70D1E596293F82D500B66DB9 /* Extension */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -152,19 +214,32 @@
 		7BC513E5293765B600DE0CE9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7BC513F2293766E900DE0CE9 /* DeleteFile.swift */,
-
+				53DC2716293F5E260047A181 /* SignInView.swift */,
+				53DC2718293F5EA10047A181 /* SignUpView.swift */,
+				70B4DE8B2940C98600AE518E /* HomeView.swift */,
+				70B4DE8D2941015B00AE518E /* MapView.swift */,
+				70B4DE8F294101A100AE518E /* AddTargetView.swift */,
 				5356BAC92937718200492851 /* UserView.swift */,
-				5356BAF3293A317600492851 /* UserModifView.swift */,
+				5318EF68293E2C3700A87B59 /* UserSettingView.swift */,
 				5356BACD2937AD8A00492851 /* ClassementView.swift */,
 				53985498293AB30000BF7CCF /* ClassementUserView.swift */,
 				5398549A293CF0A200BF7CCF /* LeadBoardView.swift */,
-
-				7B0652F3293D3CF4009385AA /* AddTargetView.swift */,
 				7BC513FC29379BC200DE0CE9 /* CodeGameView.swift */,
 				7BC514032938FF1300DE0CE9 /* WaitingRoom.swift */,
+				53DC2710293EA54E0047A181 /* TreasureView.swift */,
+				530613F9293FFE8A00E81DB7 /* TestView.swift */,
+				7071FCE529416F880015EFA0 /* ReturnView.swift */,
 				7BC513FE29379BEC00DE0CE9 /* Helpers */,
-
+				5306140429409BD300E81DB7 /* LottieView.swift */,
+				5306140629409E1500E81DB7 /* lottieTestView.swift */,
+				7BC513FA2937729B00DE0CE9 /* Button&Color.swift */,
+				7BC5140129389DA400DE0CE9 /* ViewTextField.swift */,
+				530613FE29409AAB00E81DB7 /* tresor.json */,
+				5306142C2940C43000E81DB7 /* podium.json */,
+				5306142E2940C8BE00E81DB7 /* podium (2).json */,
+				530614302940C95B00E81DB7 /* podium (3).json */,
+				530614322940C9F600E81DB7 /* podium (4).json */,
+				530614342940CAC200E81DB7 /* podium (5).json */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -196,6 +271,9 @@
 			dependencies = (
 			);
 			name = Cat;
+			packageProductDependencies = (
+				5306142A2940AF9900E81DB7 /* Lottie */,
+			);
 			productName = Cat;
 			productReference = 7BC513D0293750F400DE0CE9 /* Cat.app */;
 			productType = "com.apple.product-type.application";
@@ -224,6 +302,9 @@
 				Base,
 			);
 			mainGroup = 7BC513C7293750F400DE0CE9;
+			packageReferences = (
+				530614292940AF9900E81DB7 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 7BC513D1293750F400DE0CE9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -238,8 +319,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				530614332940C9F600E81DB7 /* podium (4).json in Resources */,
 				7BC513DB293750F400DE0CE9 /* Preview Assets.xcassets in Resources */,
+				5306142D2940C43000E81DB7 /* podium.json in Resources */,
+				530614352940CAC200E81DB7 /* podium (5).json in Resources */,
+				5306142F2940C8BF00E81DB7 /* podium (2).json in Resources */,
 				7BC513D8293750F400DE0CE9 /* Assets.xcassets in Resources */,
+				530613FF29409AAB00E81DB7 /* tresor.json in Resources */,
+				530614312940C95B00E81DB7 /* podium (3).json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,37 +337,48 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70B4DE8829409C7000AE518E /* KeychainItem.swift in Sources */,
 				7BC5140029379C0B00DE0CE9 /* LogoCAT.swift in Sources */,
+				70B4DE90294101A100AE518E /* AddTargetView.swift in Sources */,
 				7BC513D6293750F400DE0CE9 /* ContentView.swift in Sources */,
-
+				70B4DE8C2940C98600AE518E /* HomeView.swift in Sources */,
 				5356BACC2937719F00492851 /* UserViewModel.swift in Sources */,
-
+				70B4DE8A29409C9100AE518E /* SignInResponse.swift in Sources */,
+				530613FA293FFE8A00E81DB7 /* TestView.swift in Sources */,
 				7BC5140D293A067E00DE0CE9 /* DotView.swift in Sources */,
 				7BC514072938FFEF00DE0CE9 /* UserWaitVM.swift in Sources */,
+				70B4DE8E2941015B00AE518E /* MapView.swift in Sources */,
 				7BC513F9293770EE00DE0CE9 /* ButtonCust.swift in Sources */,
-
+				70B4DE9B2941039A00AE518E /* LocationManager.swift in Sources */,
 				7BC513D4293750F400DE0CE9 /* CatApp.swift in Sources */,
 				7BC514042938FF1400DE0CE9 /* WaitingRoom.swift in Sources */,
 				7BC513FB2937729B00DE0CE9 /* Button&Color.swift in Sources */,
+				70B4DE94294102C000AE518E /* Treasure.swift in Sources */,
+				70B4DE982941030C00AE518E /* MKCoordinateRegion+Extensions.swift in Sources */,
 				7BC513F12937668B00DE0CE9 /* UserModel.swift in Sources */,
+				5306140529409BD300E81DB7 /* LottieView.swift in Sources */,
+				70B4DE9D2941078D00AE518E /* GameViewModel.swift in Sources */,
+				53DC2717293F5E260047A181 /* SignInView.swift in Sources */,
+				5318EF69293E2C3700A87B59 /* UserSettingView.swift in Sources */,
+				70B4DE92294101D300AE518E /* AddTargetViewModel.swift in Sources */,
 				7BC513EB2937662F00DE0CE9 /* MapPointModel.swift in Sources */,
 				7BC514092939074000DE0CE9 /* CustList.swift in Sources */,
 				7BC513E7293765F400DE0CE9 /* TreasureModel.swift in Sources */,
-				7BC513F729376C2400DE0CE9 /* DeleteFile1.swift in Sources */,
 				5398549B293CF0A200BF7CCF /* LeadBoardView.swift in Sources */,
+				70D1E598293F82EC00B66DB9 /* UserVM.swift in Sources */,
+				70B4DE96294102D900AE518E /* Map.swift in Sources */,
 				7BC513EF2937666600DE0CE9 /* ParticipantModel.swift in Sources */,
-
 				53985499293AB30000BF7CCF /* ClassementUserView.swift in Sources */,
+				7071FCE629416F880015EFA0 /* ReturnView.swift in Sources */,
 				5356BACA2937718200492851 /* UserView.swift in Sources */,
 				5356BACE2937AD8A00492851 /* ClassementView.swift in Sources */,
-				5356BAF4293A317600492851 /* UserModifView.swift in Sources */,
-
-				7B0652F4293D3CF4009385AA /* AddTargetView.swift in Sources */,
 				7BC5140229389DA400DE0CE9 /* ViewTextField.swift in Sources */,
 				7BC513FD29379BC200DE0CE9 /* CodeGameView.swift in Sources */,
-
-				7BC513F3293766E900DE0CE9 /* DeleteFile.swift in Sources */,
+				53DC2719293F5EA10047A181 /* SignUpView.swift in Sources */,
+				5306140729409E1500E81DB7 /* lottieTestView.swift in Sources */,
 				7BC513ED2937665000DE0CE9 /* GameModel.swift in Sources */,
+				53DC2711293EA54E0047A181 /* TreasureView.swift in Sources */,
+				53DC2713293EA58B0047A181 /* TreasureViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,8 +507,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Cat/Preview Content\"";
+				DEVELOPMENT_TEAM = CDT2LZXUGZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "need user location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -437,8 +537,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Cat/Preview Content\"";
+				DEVELOPMENT_TEAM = CDT2LZXUGZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "need user location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -479,6 +581,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		530614292940AF9900E81DB7 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = exactVersion;
+				version = 3.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5306142A2940AF9900E81DB7 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 530614292940AF9900E81DB7 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7BC513C8293750F400DE0CE9 /* Project object */;
 }

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 enum ButtonType {
     case Enregistrer, Rejoindre, Création, Rappel, Annuler
@@ -13,6 +14,8 @@ enum ButtonType {
 }
 
 func getButtonType(ButtonT: ButtonType) -> String {
+    
+    
     if ButtonT == ButtonType.Enregistrer {
         return "Enregistrer"
     }
@@ -44,7 +47,7 @@ func getButtonType(ButtonT: ButtonType) -> String {
     return "err"
 }
 
-// MARK
+//-MARK:
 
 enum color {
     case orangeCust, blueCust

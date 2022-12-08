@@ -14,7 +14,8 @@ struct CustList: View {
         
         VStack{
             RoundedRectangle(cornerRadius: 20)
-                .stroke(.gray, lineWidth: 2)
+                
+                .foregroundColor(.white)
                 .frame(width: 300, height: 60)
                 .overlay {
                     HStack(){

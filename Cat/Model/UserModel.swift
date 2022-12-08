@@ -8,11 +8,23 @@
 import Foundation
 
 
-struct User: Identifiable, Codable, Equatable {
+struct User: Identifiable, Codable {
 
     var id: Int
-    var mail: String
+    var email: String
+    var password: String
     var pseudo: String
     var totPoint: Int
     var gameCounter: Int
+    var iscreator = false
 }
+
+struct UserResponse: Identifiable, Codable {
+    
+    var id: Int
+    var email: String
+    var totalPoints: Int
+    var gameCount: Int
+    var createdAt: String
+}
+
